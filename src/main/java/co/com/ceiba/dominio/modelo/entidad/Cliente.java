@@ -1,14 +1,18 @@
 package co.com.ceiba.dominio.modelo.entidad;
 
+import co.com.ceiba.infraestructura.modelo.entidad.DetalleCita;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data @AllArgsConstructor @NoArgsConstructor @Builder
+import java.util.List;
+
+@Data @AllArgsConstructor @NoArgsConstructor @Builder(setterPrefix = "con")
 public class Cliente {
 
     private Long idCliente;
-    private String nombre;
+    private String nombres;
     private String apellidos;
+    private List<DetalleCita> detalleCitas;
 }

@@ -19,7 +19,7 @@ public class ClienteEntidad implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCliente;
 
-    private String nombre;
+    private String nombres;
     private String apellidos;
 
     @JsonManagedReference
