@@ -24,5 +24,5 @@ public class ClienteEntidad implements Serializable {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "clienteEntidad", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<DetalleCita> lstDetalleCita;
+    private List<DetalleCitaEntidad> lstDetalleCita;
 }

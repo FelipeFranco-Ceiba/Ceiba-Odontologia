@@ -20,6 +20,16 @@ public final class TransformadorOdontologo {
                 .build();
     }
 
+    public static Odontologo mapToOdontologoModeloSinListaDetalle(OdontologoEntidad odontologo) {
+        return Odontologo.builder()
+                .conIdOdontologo(odontologo.getIdOdontologo())
+                .conNombres(odontologo.getNombres())
+                .conApellidos(odontologo.getApellidos())
+                .conFechaIngreso(odontologo.getFechaIngreso())
+                .conEstado(odontologo.getEstado())
+                .build();
+    }
+
     public static List<Odontologo> mapToLstOdontologoModelo(List<OdontologoEntidad> lstOdontologo) {
         return lstOdontologo.stream().map(TransformadorOdontologo::mapToOdontologoModelo).collect(Collectors.toList());
     }

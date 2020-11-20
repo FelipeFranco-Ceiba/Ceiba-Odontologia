@@ -32,5 +32,5 @@ public class OdontologoEntidad implements Serializable {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "odontologoEntidad", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<DetalleCita> lstOdontologo;
+    private List<DetalleCitaEntidad> lstOdontologo;
 }

@@ -1,6 +1,6 @@
 package co.com.ceiba.dominio.modelo.entidad;
 
-import co.com.ceiba.infraestructura.modelo.entidad.DetalleCita;
+import co.com.ceiba.infraestructura.modelo.entidad.DetalleCitaEntidad;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,5 +18,5 @@ public class Odontologo {
     private String  apellidos;
     private Date    fechaIngreso;
     private String  estado;
-    private List<DetalleCita> detalleCitas;
+    private List<DetalleCitaEntidad> detalleCitas;
 }

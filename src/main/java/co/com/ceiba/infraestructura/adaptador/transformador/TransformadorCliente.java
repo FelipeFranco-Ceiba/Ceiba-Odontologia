@@ -18,7 +18,15 @@ public final class TransformadorCliente {
                 .build();
     }
 
-    public static List<Cliente> mapToLStClienteModelo(List<ClienteEntidad> clientes) {
+    public static Cliente mapToClienteModeloSinListaDetalle(ClienteEntidad clienteEntidad) {
+        return Cliente.builder()
+                .conIdCliente(clienteEntidad.getIdCliente())
+                .conNombres(clienteEntidad.getNombres())
+                .conApellidos(clienteEntidad.getApellidos())
+                .build();
+    }
+
+    public static List<Cliente> mapToLstClienteModelo(List<ClienteEntidad> clientes) {
         return clientes.stream().map(TransformadorCliente::mapToClienteModelo).collect(Collectors.toList());
     }
 
