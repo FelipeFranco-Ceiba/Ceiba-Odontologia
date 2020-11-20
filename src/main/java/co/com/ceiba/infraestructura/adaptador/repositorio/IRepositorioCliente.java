@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface IRepositorioCliente extends JpaRepository<ClienteEntidad, Long> {
 
     Optional<ClienteEntidad> findByIdCliente(Long idCliente);
+    void deleteByIdCliente(Long idCliente);
+    Boolean existsByIdCliente(Long idCliente);
 }

@@ -32,4 +32,8 @@ public class ControladorCliente {
         return ResponseEntity.ok(this.manejadorTransaccionCliente.ejecutarActualizacion(comandoCliente));
     }
 
+    @DeleteMapping(value = "/{idCliente}")
+    public void eliminar(@PathVariable("idCliente") Long idCliente) {
+        this.manejadorTransaccionCliente.ejecutarEliminar(idCliente);
+    }
 }

@@ -21,4 +21,8 @@ public class ManejadorTransaccionCliente {
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
         return this.clienteServicio.actualizarCliente(cliente);
     }
+
+    public void ejecutarEliminar(Long idCliente) {
+        this.clienteServicio.eliminarCliente(idCliente);
+    }
 }

@@ -18,6 +18,7 @@ public class ClienteServicioImpl implements IClienteServicio<Cliente> {
 
     private final IRepositorioCliente repositorioCliente;
 
+    @Transactional(readOnly = true)
     @Override
     public List<Cliente> consultarCliente() {
         List<Cliente> clientes = TransformadorCliente.mapToLStClienteModelo(repositorioCliente.findAll());
@@ -33,21 +34,20 @@ public class ClienteServicioImpl implements IClienteServicio<Cliente> {
 
     @Override
     public Cliente actualizarCliente(Cliente cliente) {
-        existeOdontologo(cliente.getIdCliente());
+        existeCliente(cliente.getIdCliente());
         return crearOActualizarCliente(cliente);
     }
 
+    @Transactional
     @Override
     public void eliminarCliente(Long idCliente) {
-
+        existeCliente(idCliente);
+        repositorioCliente.deleteByIdCliente(idCliente);
     }
 
-    @Transactional
-    private Cliente existeOdontologo(Long idOdontologo) {
-        return repositorioCliente.findByIdCliente(idOdontologo)
-                .map(TransformadorCliente::mapToClienteModelo)
-                .orElseThrow(() -> {
-                    throw new CitaExcepcion("No existe el cliente");
-                });
+    private void existeCliente(Long idCliente) {
+        Boolean existeCliente = repositorioCliente.existsByIdCliente(idCliente);
+        if (!existeCliente)
+            throw new CitaExcepcion("No existe el cliente");
     }
 }

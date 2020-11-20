@@ -36,7 +36,7 @@ public class OdontologoServicioImpl implements IOdontologoServicio {
     @Transactional
     @Override
     public Odontologo actualizarOdontologo(Odontologo odontologo) {
-        existe(odontologo.getIdOdontologo());
+        existeOdontologo(odontologo.getIdOdontologo());
         return this.repositorioOdontologo.actualizarOdontologo(TransformadorOdontologo.mapToOdontologoEntidad(odontologo));
     }
 
@@ -47,24 +47,6 @@ public class OdontologoServicioImpl implements IOdontologoServicio {
         odontologo.setEstado("N");
         repositorioOdontologo.actualizarOdontologo(TransformadorOdontologo.mapToOdontologoEntidad(odontologo));
     }
-
-    private void existe(Long idOdontologo) {
-        Boolean existeOdontologo = repositorioOdontologo.existeOdontologo(idOdontologo);
-        if (!existeOdontologo)
-            throw new CitaExcepcion("No existe el odontologo");
-    }
-
-//    private Odontologo existe(Long idOdontologo) {
-//        return repositorioOdontologo.consultarOdontologoPorId(idOdontologo)
-//                .map(odontologoEntidad -> {
-//                    Odontologo odontologo = TransformadorOdontologo.mapToOdontologoModelo(odontologoEntidad);
-//                    odontologo.setEstado("N");
-//                    return odontologo;
-//                })
-//                .orElseThrow(() -> {
-//                    throw new CitaExcepcion("No existe el odontogolo");
-//                });
-//    }
 
     @Transactional
     private Odontologo existeOdontologo(Long idOdontologo) {
