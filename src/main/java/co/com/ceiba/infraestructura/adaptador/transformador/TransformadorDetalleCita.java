@@ -16,6 +16,7 @@ public final class TransformadorDetalleCita {
                 .conValorCita(detalleCitaEntidad.getValorCita())
                 .conCliente(TransformadorCliente.mapToClienteModeloSinListaDetalle(detalleCitaEntidad.getClienteEntidad()))
                 .conOdontologo(TransformadorOdontologo.mapToOdontologoModeloSinListaDetalle(detalleCitaEntidad.getOdontologoEntidad()))
+                .conLogin(TransformadorLogin.mapToLoginModelo(detalleCitaEntidad.getLoginEntidad()))
                 .build();
     }
 
@@ -31,6 +32,7 @@ public final class TransformadorDetalleCita {
                 .valorCita(detalleCita.getValorCita())
                 .clienteEntidad(TransformadorCliente.mapToClienteEntidad(detalleCita.getCliente()))
                 .odontologoEntidad(TransformadorOdontologo.mapToOdontologoEntidad(detalleCita.getOdontologo()))
+                .loginEntidad(TransformadorLogin.mapToToLoginEntidad(detalleCita.getLogin()))
                 .build();
     }
 }

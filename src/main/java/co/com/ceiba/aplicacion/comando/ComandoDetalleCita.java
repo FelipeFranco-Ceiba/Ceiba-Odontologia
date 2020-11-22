@@ -1,7 +1,5 @@
 package co.com.ceiba.aplicacion.comando;
 
-import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,4 +15,5 @@ public class ComandoDetalleCita {
     private long valorCita;
     private ComandoOdontologo odontologo;
     private ComandoCliente cliente;
+    private ComandoLogin login;
 }

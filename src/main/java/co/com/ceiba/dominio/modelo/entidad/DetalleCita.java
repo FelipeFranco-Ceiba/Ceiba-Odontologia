@@ -1,5 +1,6 @@
 package co.com.ceiba.dominio.modelo.entidad;
 
+import co.com.ceiba.infraestructura.modelo.entidad.LoginEntidad;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,4 +20,5 @@ public class DetalleCita {
     private long valorCita;
     private Odontologo odontologo;
     private Cliente cliente;
+    private Login login;
 }

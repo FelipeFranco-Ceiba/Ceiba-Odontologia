@@ -14,6 +14,7 @@ public final class FabricaDetalleCita {
                 .conValorCita(comandoDetalleCita.getValorCita())
                 .conOdontologo(FabricaOdontologo.crearOdontologo(comandoDetalleCita.getOdontologo()))
                 .conCliente(FabricaCliente.crearCliente(comandoDetalleCita.getCliente()))
+                .conLogin(FabricarLogin.crearLogin(comandoDetalleCita.getLogin()))
                 .build();
     }
 }

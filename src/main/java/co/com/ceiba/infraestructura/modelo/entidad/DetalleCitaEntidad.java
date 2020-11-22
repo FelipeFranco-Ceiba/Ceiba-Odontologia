@@ -35,4 +35,9 @@ public class DetalleCitaEntidad implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_CLIENTE")
     private ClienteEntidad clienteEntidad;
+
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ID_LOGIN")
+    private LoginEntidad loginEntidad;
 }
