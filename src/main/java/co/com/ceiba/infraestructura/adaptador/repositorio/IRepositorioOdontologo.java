@@ -20,7 +20,7 @@ public interface IRepositorioOdontologo extends JpaRepository<OdontologoEntidad,
 
     @Override
     default Odontologo crearOdontologo(OdontologoEntidad odontologo) {
-        return TransformadorOdontologo.mapToOdontologoModelo(save(odontologo));
+        return TransformadorOdontologo.mapToOdontologoModelo(saveAndFlush(odontologo));
     }
 
     @Override

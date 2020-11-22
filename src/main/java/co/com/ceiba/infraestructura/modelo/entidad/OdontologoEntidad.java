@@ -16,10 +16,10 @@ import java.util.List;
 @Data @AllArgsConstructor @NoArgsConstructor @Builder
 public class OdontologoEntidad implements Serializable {
 
-    @PrePersist
-    public void init() {
-        setEstado("S");
-    }
+//    @PrePersist
+//    public void init() {
+//        setEstado("S");
+//    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
