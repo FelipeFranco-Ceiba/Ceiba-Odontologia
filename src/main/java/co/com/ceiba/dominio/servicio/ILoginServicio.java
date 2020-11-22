@@ -4,4 +4,5 @@ public interface ILoginServicio<T> {
 
     T crearLogin(T login);
 
+    T login(T login);
 }

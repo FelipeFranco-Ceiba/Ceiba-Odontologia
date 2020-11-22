@@ -1,5 +1,6 @@
 package co.com.ceiba.dominio.servicio.impl;
 
+import co.com.ceiba.dominio.excepcion.CitaExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Login;
 import co.com.ceiba.dominio.servicio.ILoginServicio;
 import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioLogin;
@@ -18,5 +19,11 @@ public class LoginServicioImpl implements ILoginServicio<Login> {
     public Login crearLogin(Login login) {
         LoginEntidad loginEntidad = TransformadorLogin.mapToToLoginEntidad(login);
         return repositorioLogin.crearDetalleCita(loginEntidad);
+    }
+
+    @Override
+    public Login login(Login login) {
+        return repositorioLogin.buscarLoginPorUsuarioYClave(login.getUsuario(), login.getClave())
+                .orElseThrow(() -> new CitaExcepcion("Usuario o Clave incorrecta"));
     }
 }

@@ -16,4 +16,9 @@ public class ManejadorTransaccionLogin {
         Login login = FabricarLogin.crearLogin(comandoLogin);
         return this.loginServicio.crearLogin(login);
     }
+
+    public Login ejecutarLogin(ComandoLogin comandoLogin) {
+        Login login = FabricarLogin.crearLogin(comandoLogin);
+        return this.loginServicio.login(login);
+    }
 }

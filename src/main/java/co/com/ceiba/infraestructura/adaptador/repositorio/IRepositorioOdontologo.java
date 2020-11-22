@@ -38,7 +38,4 @@ public interface IRepositorioOdontologo extends JpaRepository<OdontologoEntidad,
         return findById(idOdontologo);
     }
 
-    //    @Modifying
-//    @Query(value = "UPDATE ODONTOLOGO o SET o.estado = 'N' WHERE o.idOdontologo = ?1")
-//    void eliminarOdontologo(Long idOdontologo);
 }

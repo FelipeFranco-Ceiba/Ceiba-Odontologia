@@ -4,6 +4,7 @@ import co.com.ceiba.dominio.modelo.entidad.Login;
 import co.com.ceiba.infraestructura.modelo.entidad.LoginEntidad;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public final class TransformadorLogin {
 
@@ -22,5 +23,13 @@ public final class TransformadorLogin {
                 .clave(login.getClave())
                 .lstDetalleCita(new ArrayList<>())
                 .build();
+    }
+
+    public static Optional<Login> matToOptionalLoginModelo(Optional<LoginEntidad> loginEntidad) {
+        return loginEntidad.map(login -> Login.builder()
+                .conIdLogin(login.getIdLogin())
+                .conUsuario(login.getUsuario())
+                .conClave(login.getClave())
+                .build());
     }
 }

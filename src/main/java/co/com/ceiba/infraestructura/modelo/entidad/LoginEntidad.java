@@ -22,6 +22,8 @@ public class LoginEntidad implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idLogin;
+
+    @Column(name = "USUARIO")
     private String usuario;
     private String clave;
 
