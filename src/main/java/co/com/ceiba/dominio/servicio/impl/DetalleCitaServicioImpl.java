@@ -4,6 +4,8 @@ import co.com.ceiba.dominio.modelo.entidad.Cliente;
 import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
 import co.com.ceiba.dominio.servicio.IDetalleCitaServicio;
 import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita;
+import co.com.ceiba.infraestructura.adaptador.transformador.TransformadorDetalleCita;
+import co.com.ceiba.infraestructura.modelo.entidad.DetalleCitaEntidad;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,7 +26,8 @@ public class DetalleCitaServicioImpl implements IDetalleCitaServicio<DetalleCita
 
     @Override
     public DetalleCita crearOActualizarDetalleCita(DetalleCita detalleCita) {
-        return null;
+        DetalleCitaEntidad detalleCitaEntidad = TransformadorDetalleCita.mapToDetalleCitaEntidad(detalleCita);
+        return repositorioDetalleCita.crearDetalleCita(detalleCitaEntidad);
     }
 
     @Override

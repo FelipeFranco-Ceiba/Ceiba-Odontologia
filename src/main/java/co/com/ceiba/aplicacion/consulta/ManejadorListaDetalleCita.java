@@ -1,5 +1,7 @@
 package co.com.ceiba.aplicacion.consulta;
 
+import co.com.ceiba.aplicacion.comando.ComandoDetalleCita;
+import co.com.ceiba.aplicacion.fabrica.FabricaDetalleCita;
 import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
 import co.com.ceiba.dominio.servicio.IDetalleCitaServicio;
 import lombok.AllArgsConstructor;
@@ -15,5 +17,10 @@ public class ManejadorListaDetalleCita {
 
     public List<DetalleCita> ejecutar() {
         return this.detalleCitaIDetalleCitaServicio.consultarDetalleCita();
+    }
+
+    public DetalleCita ejecutarCreacion(ComandoDetalleCita comandoDetalleCita) {
+        DetalleCita detalleCita = FabricaDetalleCita.crearDetalleCita(comandoDetalleCita);
+        return this.detalleCitaIDetalleCitaServicio.crearOActualizarDetalleCita(detalleCita);
     }
 }

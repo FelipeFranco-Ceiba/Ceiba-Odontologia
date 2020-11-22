@@ -15,9 +15,17 @@ public final class TransformadorOdontologo {
                 .conNombres(odontologo.getNombres())
                 .conApellidos(odontologo.getApellidos())
                 .conFechaIngreso(odontologo.getFechaIngreso())
-                .conEstado(odontologo.getEstado())
+                .conEstado(TransformadorOdontologo.transformarStringToBoolean(odontologo.getEstado()))
                 .conDetalleCitas(odontologo.getLstOdontologo())
                 .build();
+    }
+
+    public static Boolean transformarStringToBoolean(String estado) {
+        return estado.equals("S");
+    }
+
+    public static String transformarBooleanToString(Boolean estado) {
+        return estado ? "S" : "N";
     }
 
     public static Odontologo mapToOdontologoModeloSinListaDetalle(OdontologoEntidad odontologo) {
@@ -26,7 +34,7 @@ public final class TransformadorOdontologo {
                 .conNombres(odontologo.getNombres())
                 .conApellidos(odontologo.getApellidos())
                 .conFechaIngreso(odontologo.getFechaIngreso())
-                .conEstado(odontologo.getEstado())
+                .conEstado(TransformadorOdontologo.transformarStringToBoolean(odontologo.getEstado()))
                 .build();
     }
 
@@ -40,7 +48,7 @@ public final class TransformadorOdontologo {
                 .nombres(odontologo.getNombres())
                 .apellidos(odontologo.getApellidos())
                 .fechaIngreso(odontologo.getFechaIngreso())
-                .estado(odontologo.getEstado())
+                .estado(TransformadorOdontologo.transformarBooleanToString(odontologo.getEstado()))
                 .lstOdontologo(new ArrayList<>())
                 .build();
     }

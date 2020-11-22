@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @AllArgsConstructor
 @RequestMapping(value = "/odontologo")
@@ -15,11 +16,6 @@ public class ControladorOdontologo {
 
     private final ManejadorListaOdontologo manejadorListaOdontologo;
     private final ManejadorTransaccionOdontologo manejadorTransaccionOdontologo;
-
-    @GetMapping(value = "inicio")
-    public String inicio() {
-        return "Inicio!";
-    }
 
     @GetMapping
     public ResponseEntity<?> consultaOdontolos() {

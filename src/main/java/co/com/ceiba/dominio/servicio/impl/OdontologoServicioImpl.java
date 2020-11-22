@@ -44,7 +44,7 @@ public class OdontologoServicioImpl implements IOdontologoServicio {
     @Override
     public void eliminarOdontologo(Long idOdontologo) {
         Odontologo odontologo = existeOdontologo(idOdontologo);
-        odontologo.setEstado("N");
+        odontologo.setEstado(false);
         repositorioOdontologo.actualizarOdontologo(TransformadorOdontologo.mapToOdontologoEntidad(odontologo));
     }
 

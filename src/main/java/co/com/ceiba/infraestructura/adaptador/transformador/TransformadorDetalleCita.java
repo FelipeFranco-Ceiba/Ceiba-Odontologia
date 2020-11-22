@@ -22,4 +22,15 @@ public final class TransformadorDetalleCita {
     public static List<DetalleCita> matToLstDetalleCitaModelo(List<DetalleCitaEntidad> detalleCitas) {
         return detalleCitas.stream().map(TransformadorDetalleCita::mapToDetalleCitaModelo).collect(Collectors.toList());
     }
+
+    public static DetalleCitaEntidad mapToDetalleCitaEntidad(DetalleCita detalleCita) {
+        return DetalleCitaEntidad.builder()
+                .idDetalleCita(detalleCita.getIdDetalleCita())
+                .fechaCita(detalleCita.getFechaCita())
+                .horaCita(detalleCita.getHoraCita())
+                .valorCita(detalleCita.getValorCita())
+                .clienteEntidad(TransformadorCliente.mapToClienteEntidad(detalleCita.getCliente()))
+                .odontologoEntidad(TransformadorOdontologo.mapToOdontologoEntidad(detalleCita.getOdontologo()))
+                .build();
+    }
 }

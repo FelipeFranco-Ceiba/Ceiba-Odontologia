@@ -1,11 +1,11 @@
 package co.com.ceiba.infraestructura.controlador;
 
+import co.com.ceiba.aplicacion.comando.ComandoDetalleCita;
 import co.com.ceiba.aplicacion.consulta.ManejadorListaDetalleCita;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
@@ -17,5 +17,10 @@ public class ControladorDetalleCita {
     @GetMapping
     public ResponseEntity<?> consultarDetalleCita() {
         return ResponseEntity.ok(this.manejadorListaDetalleCita.ejecutar());
+    }
+    @PostMapping
+    public ResponseEntity<?> crear(@RequestBody ComandoDetalleCita comandoDetalleCita) {
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(this.manejadorListaDetalleCita.ejecutarCreacion(comandoDetalleCita));
     }
 }

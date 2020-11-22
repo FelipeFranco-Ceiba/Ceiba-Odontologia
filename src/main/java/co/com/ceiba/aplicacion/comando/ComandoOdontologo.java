@@ -13,5 +13,5 @@ public class ComandoOdontologo {
     private String nombres;
     private String apellidos;
     private String fechaIngreso;
-    private String estado;
+    private Boolean estado;
 }

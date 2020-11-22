@@ -16,4 +16,9 @@ public interface IRepositorioDetalleCita extends JpaRepository<DetalleCitaEntida
     default List<DetalleCita> consultarDetalleCita() {
         return TransformadorDetalleCita.matToLstDetalleCitaModelo(findAll());
     }
+
+    @Override
+    default DetalleCita crearDetalleCita(DetalleCitaEntidad detalleCitaEntidad) {
+        return TransformadorDetalleCita.mapToDetalleCitaModelo(save(detalleCitaEntidad));
+    }
 }

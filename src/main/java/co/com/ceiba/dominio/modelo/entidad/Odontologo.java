@@ -17,6 +17,6 @@ public class Odontologo {
     private String  nombres;
     private String  apellidos;
     private Date    fechaIngreso;
-    private String  estado;
+    private Boolean  estado;
     private List<DetalleCitaEntidad> detalleCitas;
 }
