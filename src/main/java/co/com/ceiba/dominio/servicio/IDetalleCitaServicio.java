@@ -1,7 +1,5 @@
 package co.com.ceiba.dominio.servicio;
 
-import co.com.ceiba.dominio.modelo.entidad.Cliente;
-
 import java.util.List;
 
 public interface IDetalleCitaServicio<T> {
@@ -10,7 +8,7 @@ public interface IDetalleCitaServicio<T> {
 
     T crearOActualizarDetalleCita(T detalleCita);
 
-    Cliente actualizarDetalleCita(T detalleCita);
+    T actualizarDetalleCita(T detalleCita);
 
 
     void eliminarDetalleCita(Long idDetalleCita);

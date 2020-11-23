@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 @RestController
 @AllArgsConstructor
 @RequestMapping(value = "detalleCita")
@@ -25,6 +25,11 @@ public class ControladorDetalleCita {
     public ResponseEntity<?> crear(@RequestBody ComandoDetalleCita comandoDetalleCita) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(this.manejadorTransaccionDetalleCita.ejecutarCreacion(comandoDetalleCita));
+    }
+
+    @PutMapping
+    public ResponseEntity<?> actualizar(@RequestBody ComandoDetalleCita comandoDetalleCita) {
+        return ResponseEntity.ok(this.manejadorTransaccionDetalleCita.ejecutarActualizacion(comandoDetalleCita));
     }
 
     @DeleteMapping(value = "/{idDetalleCita}")

@@ -20,4 +20,9 @@ public class ManejadorTransaccionDetalleCita {
     public void ejecutarEliminar(Long idDetalleCita) {
         this.detalleCitaIDetalleCitaServicio.eliminarDetalleCita(idDetalleCita);
     }
+
+    public DetalleCita ejecutarActualizacion(ComandoDetalleCita comandoDetalleCita) {
+        DetalleCita detalleCita = FabricaDetalleCita.crearDetalleCita(comandoDetalleCita);
+        return this.detalleCitaIDetalleCitaServicio.actualizarDetalleCita(detalleCita);
+    }
 }

@@ -1,14 +1,10 @@
 package co.com.ceiba.dominio.servicio.impl;
 
 import co.com.ceiba.dominio.excepcion.CitaExcepcion;
-import co.com.ceiba.dominio.modelo.entidad.Cliente;
 import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
-import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import co.com.ceiba.dominio.servicio.IDetalleCitaServicio;
 import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo;
 import co.com.ceiba.infraestructura.adaptador.transformador.TransformadorDetalleCita;
-import co.com.ceiba.infraestructura.adaptador.transformador.TransformadorOdontologo;
 import co.com.ceiba.infraestructura.modelo.entidad.DetalleCitaEntidad;
 import co.com.ceiba.infraestructura.utilidades.FormatearFecha;
 import lombok.AllArgsConstructor;
@@ -75,8 +71,9 @@ public class DetalleCitaServicioImpl implements IDetalleCitaServicio<DetalleCita
     }
 
     @Override
-    public Cliente actualizarDetalleCita(DetalleCita detalleCita) {
-        return null;
+    public DetalleCita actualizarDetalleCita(DetalleCita detalleCita) {
+        existeDetalleCita(detalleCita.getIdDetalleCita());
+        return crearOActualizarDetalleCita(detalleCita);
     }
 
     @Transactional
