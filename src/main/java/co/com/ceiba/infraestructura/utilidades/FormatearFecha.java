@@ -4,6 +4,8 @@ import co.com.ceiba.dominio.excepcion.CitaExcepcion;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class FormatearFecha {
@@ -16,5 +18,9 @@ public class FormatearFecha {
         } catch (ParseException e) {
             throw new CitaExcepcion("Ocurrio un error formateando la fecha de ingreso del: " + e.getClass().getSimpleName());
         }
+    }
+
+    public static LocalDate transformarDateToLocalDate(Date fecha) {
+        return fecha.toInstant().atZone(ZoneId.of("America/Bogota")).toLocalDate();
     }
 }

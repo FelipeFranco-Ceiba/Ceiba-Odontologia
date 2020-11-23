@@ -36,9 +36,7 @@ public interface IRepositorioDetalleCita extends JpaRepository<DetalleCitaEntida
 
     @Override
     default int horasTrabajasOdontologo(Long idOdontologo, Date fechaCita) {
-        int suma = sumarHoras(idOdontologo, fechaCita);
-        System.out.println(suma);
-        return 0;
+        return sumarHoras(idOdontologo, fechaCita);
     }
 
     @Query("SELECT COALESCE(SUM(dc.horaCita), 0) FROM DetalleCitaEntidad dc where dc.odontologoEntidad.idOdontologo = ?1 AND dc.fechaCita = ?2")
