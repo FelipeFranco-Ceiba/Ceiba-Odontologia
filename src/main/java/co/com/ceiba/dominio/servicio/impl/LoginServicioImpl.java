@@ -18,6 +18,10 @@ public class LoginServicioImpl implements ILoginServicio<Login> {
     @Override
     public Login crearLogin(Login login) {
         LoginEntidad loginEntidad = TransformadorLogin.mapToToLoginEntidad(login);
+        Boolean existeUsuarioRegistrado = repositorioLogin.existeUsuarioRegistrado(loginEntidad.getUsuario());
+        if (existeUsuarioRegistrado) {
+            throw new CitaExcepcion("Ya existe un usuario con este mismo usuario, por favor ingresa uno diferente");
+        }
         return repositorioLogin.crearDetalleCita(loginEntidad);
     }
 

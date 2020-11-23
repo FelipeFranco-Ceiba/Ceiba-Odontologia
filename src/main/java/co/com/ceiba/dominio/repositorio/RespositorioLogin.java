@@ -10,4 +10,6 @@ public interface RespositorioLogin {
     Login crearDetalleCita(LoginEntidad loginEntidad);
 
     Optional<Login> buscarLoginPorUsuarioYClave(String usuario, String clave);
+
+    Boolean existeUsuarioRegistrado(String usuario);
 }

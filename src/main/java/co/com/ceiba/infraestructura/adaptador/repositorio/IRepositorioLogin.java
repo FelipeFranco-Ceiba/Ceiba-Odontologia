@@ -4,7 +4,6 @@ import co.com.ceiba.dominio.modelo.entidad.Login;
 import co.com.ceiba.dominio.repositorio.RespositorioLogin;
 import co.com.ceiba.infraestructura.adaptador.transformador.TransformadorLogin;
 import co.com.ceiba.infraestructura.modelo.entidad.LoginEntidad;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -22,6 +21,13 @@ public interface IRepositorioLogin extends JpaRepository<LoginEntidad, Long>, Re
     default Optional<Login> buscarLoginPorUsuarioYClave(String usuario, String clave) {
         return TransformadorLogin.matToOptionalLoginModelo(findByUsuarioAndClave(usuario, clave));
     }
+
+    @Override
+    default Boolean existeUsuarioRegistrado(String usuario) {
+        return existsByUsuario(usuario);
+    }
+
+    Boolean existsByUsuario (String usuario);
 
     Optional<LoginEntidad> findByUsuarioAndClave(String usuario, String clave);
 
