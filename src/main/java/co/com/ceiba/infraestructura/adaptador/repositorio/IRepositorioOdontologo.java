@@ -5,6 +5,7 @@ import co.com.ceiba.dominio.repositorio.RepositorioOdontologo;
 import co.com.ceiba.infraestructura.adaptador.transformador.TransformadorOdontologo;
 import co.com.ceiba.infraestructura.modelo.entidad.OdontologoEntidad;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -38,4 +39,11 @@ public interface IRepositorioOdontologo extends JpaRepository<OdontologoEntidad,
         return findById(idOdontologo);
     }
 
+//    @Override
+//    default int sumarHorasTrabajadas(Long idOdontologo) {
+//        return sumarHoras(idOdontologo);
+//    }
+//
+//    @Query("SELECT od.horaCita FROM OdontologoEntidad.lstOdontologo od where od.idOdontologo = ?1")
+//    int sumarHoras(Long idOdontologo);
 }

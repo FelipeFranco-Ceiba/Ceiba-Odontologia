@@ -16,4 +16,8 @@ public class ManejadorTransaccionDetalleCita {
         DetalleCita detalleCita = FabricaDetalleCita.crearDetalleCita(comandoDetalleCita);
         return this.detalleCitaIDetalleCitaServicio.crearOActualizarDetalleCita(detalleCita);
     }
+
+    public void ejecutarEliminar(Long idDetalleCita) {
+        this.detalleCitaIDetalleCitaServicio.eliminarDetalleCita(idDetalleCita);
+    }
 }

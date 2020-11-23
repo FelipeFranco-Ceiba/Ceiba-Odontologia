@@ -1,6 +1,8 @@
 package co.com.ceiba.infraestructura.controlador;
 
+import co.com.ceiba.aplicacion.comando.ComandoCliente;
 import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
+import co.com.ceiba.infraestructura.mockfactory.ClienteFactory;
 import co.com.ceiba.infraestructura.mockfactory.OdontologoFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -24,7 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
 @SpringBootTest
-public class ControladorOdontologoTest {
+public class ControladorClienteTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -32,83 +34,66 @@ public class ControladorOdontologoTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    private static final Long ID_ODONTOLOGO = 3L;
-    private static final String NOMBRES = "Felipe";
+    private static final Long ID_CLIENTE = 3L;
     private static final String APPELLIDOS = "Franco";
-    private static final String FECHA_INGRESO = "15/06/2020";
-    private static final Boolean ESTADO = true;
 
     @Test
-    public void consultaOdontolos() throws Exception {
+    public void consultaClientes() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-        .get("/odontologo")
-        .accept(MediaType.APPLICATION_JSON))
-        .andDo(print())
-        .andExpect(status().isOk())
-        .andExpect(MockMvcResultMatchers.jsonPath("$.[0].nombres").value("FELIPE"));
+                .get("/cliente")
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.[0].nombres").value("LA MOSA"));
     }
 
     @Test
-    public void crearOdontolos() throws Exception {
-        ComandoOdontologo comandoOdontologo = new OdontologoFactory().buildComando();
+    public void crearCliente() throws Exception {
+        ComandoCliente comandoCliente = new ClienteFactory().buildComando();
         mockMvc.perform(MockMvcRequestBuilders
-                .post("/odontologo")
-                .content(objectMapper.writeValueAsString(comandoOdontologo))
+                .post("/cliente")
+                .content(objectMapper.writeValueAsString(comandoCliente))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
 
         mockMvc.perform(MockMvcRequestBuilders
-                .get("/odontologo")
+                .get("/cliente")
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.[2].apellidos").value("Franco"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.[2].apellidos").value("Prueba"));
     }
 
     @Test
-    public void actualizarOdontologo() throws Exception {
-        Boolean estadoActualizado = false;
-        ComandoOdontologo comandoOdontologo = new OdontologoFactory().buildComando(ID_ODONTOLOGO, NOMBRES, APPELLIDOS, FECHA_INGRESO, estadoActualizado);
+    public void actualizarCliente() throws Exception {
+        String nombres = "Prueba cambio nombre";
+        ComandoCliente comandoCliente = new ClienteFactory().buildComando(ID_CLIENTE, nombres, APPELLIDOS);
         mockMvc.perform(MockMvcRequestBuilders
-                .put("/odontologo")
-                .content(objectMapper.writeValueAsString(comandoOdontologo))
+                .put("/cliente")
+                .content(objectMapper.writeValueAsString(comandoCliente))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
         mockMvc.perform(MockMvcRequestBuilders
-                .get("/odontologo")
+                .get("/cliente")
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.[1].estado").value(estadoActualizado));
-    }
-
-    @Test
-    public void actualizarOdontologoErrorFormatoFecha() throws Exception {
-        String FECHA_INGRESO = "2020-11-19T05:00:00.000+00:00";
-        ComandoOdontologo coandoOdontologo = new OdontologoFactory().buildComando(ID_ODONTOLOGO, NOMBRES, APPELLIDOS, FECHA_INGRESO, ESTADO);
-        mockMvc.perform(MockMvcRequestBuilders
-                .put("/odontologo")
-                .content(objectMapper.writeValueAsString(coandoOdontologo))
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isBadRequest());
+                .andExpect(MockMvcResultMatchers.jsonPath("$.[1].nombres").value(nombres));
     }
 
     @Test
     public void eliminarOdontolos() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-                .delete("/odontologo/{idOdontologo}", 1))
+                .delete("/cliente/{idCliente}", 1))
                 .andExpect(status().isOk());
 
         mockMvc.perform(MockMvcRequestBuilders
-                .get("/odontologo")
+                .get("/cliente")
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.[0].estado").value(false));
+                .andExpect(status().isOk());
     }
-
 }

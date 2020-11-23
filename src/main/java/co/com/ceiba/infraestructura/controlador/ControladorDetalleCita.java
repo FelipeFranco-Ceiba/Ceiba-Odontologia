@@ -25,4 +25,9 @@ public class ControladorDetalleCita {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(this.manejadorTransaccionDetalleCita.ejecutarCreacion(comandoDetalleCita));
     }
+
+    @DeleteMapping(value = "/{idDetalleCita}")
+    public void eliminar(@PathVariable("idDetalleCita") Long idDetalleCita) {
+        this.manejadorTransaccionDetalleCita.ejecutarEliminar(idDetalleCita);
+    }
 }

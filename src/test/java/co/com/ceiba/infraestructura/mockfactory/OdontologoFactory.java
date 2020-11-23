@@ -1,7 +1,6 @@
 package co.com.ceiba.infraestructura.mockfactory;
 
 import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
-import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import co.com.ceiba.infraestructura.modelo.entidad.DetalleCitaEntidad;
 
 import java.text.ParseException;
@@ -35,15 +34,6 @@ public class OdontologoFactory {
         this.fechaIngreso = new SimpleDateFormat(FORMATO).parse(FECHA_INGRESO_ODONTOLOGO);
         this.estado = ESTADO;
         this.detalleCitas = DETALLE_CITAS;
-    }
-
-    public OdontologoFactory conEstado(Boolean estado) {
-        this.estado = estado;
-        return this;
-    }
-
-    public Odontologo build() throws ParseException {
-        return new Odontologo(ID_ODONTOLOGO, NOMBRES, APPELLIDOS,  new SimpleDateFormat(FORMATO).parse(FECHA_INGRESO_ODONTOLOGO), ESTADO, DETALLE_CITAS);
     }
 
     public ComandoOdontologo buildComando() {

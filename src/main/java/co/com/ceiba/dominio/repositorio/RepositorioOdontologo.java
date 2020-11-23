@@ -13,4 +13,6 @@ public interface RepositorioOdontologo {
     Odontologo crearOdontologo(OdontologoEntidad odontologo);
     Odontologo actualizarOdontologo(OdontologoEntidad odontologo);
     Optional<OdontologoEntidad> consultarOdontologoPorId(Long idOdontologo);
+
+//    int sumarHorasTrabajadas(Long idOdontologo);
 }
