@@ -16,6 +16,8 @@ pipeline {
     gradle 'Gradle5.6_Centos' //Preinstalada en la Configuración del Master
   }
 
+stages{
+
   //Aquí comienzan los “items” del Pipeline
   stage('Checkout'){
   	steps{
@@ -34,7 +36,6 @@ pipeline {
         ])
     }
   }
-
 
     stage('Compile') {
       steps{
@@ -65,8 +66,7 @@ sh "${tool name: 'SonarScanner', type:'hudson.plugins.sonar.SonarRunnerInstallat
         sh 'gradle --b ./build.gradle build -x test'
       }
     }
-
-
+  }
   post {
     always {
       echo 'This will always run'
