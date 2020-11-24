@@ -65,7 +65,7 @@ sh "${tool name: 'SonarScanner', type:'hudson.plugins.sonar.SonarRunnerInstallat
         sh 'gradle --b ./build.gradle build -x test'
       }
     }
-  }
+
 
   post {
     always {
