@@ -3,8 +3,6 @@ package co.com.ceiba.infraestructura.mockfactory;
 import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
 import co.com.ceiba.infraestructura.modelo.entidad.DetalleCitaEntidad;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -27,14 +25,6 @@ public class OdontologoFactory {
     private Boolean  estado;
     private List<DetalleCitaEntidad> detalleCitas;
 
-    public OdontologoFactory() throws ParseException {
-        this.idOdontologo = ID_ODONTOLOGO;
-        this.nombres = NOMBRES;
-        this.apellidos = APPELLIDOS;
-        this.fechaIngreso = new SimpleDateFormat(FORMATO).parse(FECHA_INGRESO_ODONTOLOGO);
-        this.estado = ESTADO;
-        this.detalleCitas = DETALLE_CITAS;
-    }
 
     public ComandoOdontologo buildComando() {
         return new ComandoOdontologo(ID_ODONTOLOGO, NOMBRES, APPELLIDOS, FECHA_INGRESO_ODONTOLOGO, ESTADO);

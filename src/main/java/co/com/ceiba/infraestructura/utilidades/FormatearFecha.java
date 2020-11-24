@@ -16,7 +16,7 @@ public class FormatearFecha {
         try {
             return new SimpleDateFormat(FORMATO).parse(fecha);
         } catch (ParseException e) {
-            throw new CitaExcepcion("Ocurrio un error formateando la fecha de ingreso del: " + e.getClass().getSimpleName());
+            throw new CitaExcepcion("Ocurrio un error formateando la fecha");
         }
     }
 

@@ -46,7 +46,7 @@ public class DetalleCitaServicioImpl implements IDetalleCitaServicio<DetalleCita
         int horasTrabajadas = repositorioDetalleCita.horasTrabajasOdontologo(idOdontologo, fechaCita);
         LocalDate fechaCitaFormat = FormatearFecha.transformarDateToLocalDate(fechaCita);
 
-        if (fechaCitaFormat.plusDays(1).getDayOfWeek().equals(DayOfWeek.SATURDAY) || fechaCitaFormat.getDayOfWeek().equals(DayOfWeek.SUNDAY)) {
+        if (fechaCitaFormat.getDayOfWeek().equals(DayOfWeek.SATURDAY) || fechaCitaFormat.getDayOfWeek().equals(DayOfWeek.SUNDAY)) {
             return validYCalcularValorHorasFinDeSemana(horasTrabajadas, horaCita);
         } else {
             return validYCalcularValorHorasEnSemana(horasTrabajadas, horaCita);
