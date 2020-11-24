@@ -17,7 +17,7 @@ public class ManejadorTransaccionCliente {
         return this.clienteServicio.crearOActualizarCliente(cliente);
     }
 
-    public Object ejecutarActualizacion(ComandoCliente comandoCliente) {
+    public Cliente ejecutarActualizacion(ComandoCliente comandoCliente) {
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
         return this.clienteServicio.actualizarCliente(cliente);
     }

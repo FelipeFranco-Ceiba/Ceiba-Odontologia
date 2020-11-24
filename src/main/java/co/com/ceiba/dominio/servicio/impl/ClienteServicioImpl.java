@@ -18,7 +18,6 @@ public class ClienteServicioImpl implements IClienteServicio<Cliente> {
 
     private final IRepositorioCliente repositorioCliente;
 
-    @Transactional(readOnly = true)
     @Override
     public List<Cliente> consultarCliente() {
         return TransformadorCliente.mapToLstClienteModelo(repositorioCliente.findAll());
