@@ -11,8 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Stream;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -50,10 +49,14 @@ public class OdontologoServicioImpl implements IOdontologoServicio {
 
     @Transactional
     private Odontologo existeOdontologo(Long idOdontologo) {
-        return repositorioOdontologo.consultarOdontologoPorId(idOdontologo)
+
+        Odontologo odontologo = repositorioOdontologo.consultarOdontologoPorId(idOdontologo)
                 .map(TransformadorOdontologo::mapToOdontologoModelo)
-                .orElseThrow(() -> {
-                    throw new CitaExcepcion("No existe el odontologo");
-                });
+                .orElse(null);
+
+        if (odontologo == null) {
+            throw new CitaExcepcion("No existe el odontologo");
+        }
+        return odontologo;
     }
 }
