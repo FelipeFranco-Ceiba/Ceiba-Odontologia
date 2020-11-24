@@ -1,7 +1,9 @@
 package co.com.ceiba.infraestructura.mockfactory;
 
 import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
+import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import co.com.ceiba.infraestructura.modelo.entidad.DetalleCitaEntidad;
+import co.com.ceiba.infraestructura.utilidades.FormatearFecha;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,5 +34,16 @@ public class OdontologoFactory {
 
     public ComandoOdontologo buildComando(Long idOdontologo, String nombres, String apellidos, String fechaIngreso, Boolean estado) {
         return new ComandoOdontologo(idOdontologo, nombres, apellidos, fechaIngreso, estado);
+    }
+
+    public Odontologo buildOdontologo() {
+        return Odontologo.builder()
+            .conIdOdontologo(ID_ODONTOLOGO)
+            .conNombres(NOMBRES)
+            .conApellidos(APPELLIDOS)
+            .conFechaIngreso(FormatearFecha.transformarStringToDate(FECHA_INGRESO_ODONTOLOGO))
+            .conEstado(ESTADO)
+            .conDetalleCitas(new ArrayList<>())
+            .build();
     }
 }

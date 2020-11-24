@@ -8,7 +8,6 @@ import co.com.ceiba.infraestructura.mockfactory.LoginFactory;
 import co.com.ceiba.infraestructura.modelo.entidad.LoginEntidad;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Optional;

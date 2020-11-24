@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 
 @AllArgsConstructor
 @Service
 public class OdontologoServicioImpl implements IOdontologoServicio {
 
     private final IRepositorioOdontologo repositorioOdontologo;
+    public static final String ERROR_NO_EXISTE_ODONTOLOGO = "No existe el odontologo";
 
     @Transactional(readOnly = true)
     @Override
@@ -36,7 +36,7 @@ public class OdontologoServicioImpl implements IOdontologoServicio {
     @Override
     public Odontologo actualizarOdontologo(Odontologo odontologo) {
         existeOdontologo(odontologo.getIdOdontologo());
-        return this.repositorioOdontologo.actualizarOdontologo(TransformadorOdontologo.mapToOdontologoEntidad(odontologo));
+        return repositorioOdontologo.actualizarOdontologo(TransformadorOdontologo.mapToOdontologoEntidad(odontologo));
     }
 
     @Transactional
@@ -48,14 +48,14 @@ public class OdontologoServicioImpl implements IOdontologoServicio {
     }
 
     @Transactional
-    private Odontologo existeOdontologo(Long idOdontologo) {
+    public Odontologo existeOdontologo(Long idOdontologo) {
 
         Odontologo odontologo = repositorioOdontologo.consultarOdontologoPorId(idOdontologo)
                 .map(TransformadorOdontologo::mapToOdontologoModelo)
                 .orElse(null);
 
         if (odontologo == null) {
-            throw new CitaExcepcion("No existe el odontologo");
+            throw new CitaExcepcion(ERROR_NO_EXISTE_ODONTOLOGO);
         }
         return odontologo;
     }
