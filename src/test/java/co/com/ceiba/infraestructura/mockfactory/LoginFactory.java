@@ -1,6 +1,7 @@
 package co.com.ceiba.infraestructura.mockfactory;
 
 import co.com.ceiba.aplicacion.comando.ComandoLogin;
+import co.com.ceiba.dominio.modelo.entidad.Login;
 
 public class LoginFactory {
 
@@ -14,5 +15,13 @@ public class LoginFactory {
 
     public ComandoLogin buildComando() {
         return new ComandoLogin(ID_LOGIN, USUARIO, CLAVE);
+    }
+
+    public Login buildLogin() {
+        return Login.builder()
+                .conIdLogin(ID_LOGIN)
+                .conUsuario(USUARIO)
+                .conClave(CLAVE)
+                .build();
     }
 }

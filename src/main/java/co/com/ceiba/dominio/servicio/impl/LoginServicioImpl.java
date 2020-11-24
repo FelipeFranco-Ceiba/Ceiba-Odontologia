@@ -14,13 +14,15 @@ import org.springframework.stereotype.Service;
 public class LoginServicioImpl implements ILoginServicio<Login> {
 
     private final IRepositorioLogin repositorioLogin;
+    public static final String ERROR_EXISTE_USUARIO = "Ya existe un usuario con este mismo usuario, por favor ingresa uno diferente";
+    public static final String ERROR_USUARIO_CLAVE_NO_EXISTE = "Usuario o Clave incorrecta";
 
     @Override
     public Login crearLogin(Login login) {
         LoginEntidad loginEntidad = TransformadorLogin.mapToToLoginEntidad(login);
         Boolean existeUsuarioRegistrado = repositorioLogin.existeUsuarioRegistrado(loginEntidad.getUsuario());
         if (existeUsuarioRegistrado) {
-            throw new CitaExcepcion("Ya existe un usuario con este mismo usuario, por favor ingresa uno diferente");
+            throw new CitaExcepcion(ERROR_EXISTE_USUARIO);
         }
         return repositorioLogin.crearDetalleCita(loginEntidad);
     }
@@ -28,6 +30,6 @@ public class LoginServicioImpl implements ILoginServicio<Login> {
     @Override
     public Login login(Login login) {
         return repositorioLogin.buscarLoginPorUsuarioYClave(login.getUsuario(), login.getClave())
-                .orElseThrow(() -> new CitaExcepcion("Usuario o Clave incorrecta"));
+                .orElseThrow(() -> new CitaExcepcion(ERROR_USUARIO_CLAVE_NO_EXISTE));
     }
 }
