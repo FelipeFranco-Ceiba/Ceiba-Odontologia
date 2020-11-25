@@ -19,7 +19,7 @@ public class EliminarClienteServicio {
         repositorioCliente.eliminarClientePorId(idCliente);
     }
 
-    private void existeCliente(Long idCliente) {
+    public void existeCliente(Long idCliente) {
         Boolean existeCliente = repositorioCliente.existsByIdCliente(idCliente);
         if (!existeCliente)
             throw new ExistenciaPersonaExcepcion(ERROR_NO_EXISTE_CLIENTE);

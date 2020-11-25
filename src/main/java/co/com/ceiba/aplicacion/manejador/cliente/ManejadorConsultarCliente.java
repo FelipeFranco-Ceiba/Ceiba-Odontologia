@@ -1,7 +1,6 @@
 package co.com.ceiba.aplicacion.manejador.cliente;
 
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.servicio.IClienteServicio;
 import co.com.ceiba.dominio.servicio.cliente.ConsultarClienteServicio;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

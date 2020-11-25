@@ -1,11 +1,10 @@
 package co.com.ceiba.aplicacion.comando;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
 @AllArgsConstructor
+@Getter
+@Setter
 @Builder(setterPrefix = "con")
 public class ComandoDetalleCita {
 

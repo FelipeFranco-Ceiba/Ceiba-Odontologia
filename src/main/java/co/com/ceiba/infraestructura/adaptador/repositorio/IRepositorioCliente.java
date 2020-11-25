@@ -40,7 +40,6 @@ public interface IRepositorioCliente extends JpaRepository<ClienteEntidad, Long>
         deleteByIdCliente(idCliente);
     }
 
-//    Optional<ClienteEntidad> findByIdCliente(Long idCliente);
     void deleteByIdCliente(Long idCliente);
     Boolean existsByIdCliente(Long idCliente);
 }

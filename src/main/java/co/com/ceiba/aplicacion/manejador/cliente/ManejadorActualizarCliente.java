@@ -4,7 +4,6 @@ import co.com.ceiba.aplicacion.comando.ComandoCliente;
 import co.com.ceiba.aplicacion.fabrica.FabricaCliente;
 import co.com.ceiba.aplicacion.manejador.ManejadorComandoRespuesta;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.servicio.IClienteServicio;
 import co.com.ceiba.dominio.servicio.cliente.ActualizarClienteService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

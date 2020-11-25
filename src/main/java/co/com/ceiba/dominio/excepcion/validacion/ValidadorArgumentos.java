@@ -2,7 +2,7 @@ package co.com.ceiba.dominio.excepcion.validacion;
 
 import co.com.ceiba.dominio.excepcion.ValorObligatorioExcepcion;
 
-public class ValidadorArgumentos {
+public final class ValidadorArgumentos {
 
     private ValidadorArgumentos() { }
 
