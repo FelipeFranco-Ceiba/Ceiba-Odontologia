@@ -1,7 +1,7 @@
 package co.com.ceiba.aplicacion.manejador.cliente;
 
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.servicio.IClienteServicio;
+import co.com.ceiba.dominio.servicio.cliente.ConsultarClienteServicio;
 import co.com.ceiba.infraestructura.mockfactory.ClienteFactory;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,13 +18,13 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class ManejadorConsultarClienteTest {
 
-    private IClienteServicio<Cliente> clienteServicio;
+    private ConsultarClienteServicio consultarClienteServicio;
     private ManejadorConsultarCliente spyManejadorConsultarCliente;
 
     @Before
     public void before() {
-        clienteServicio = mock(IClienteServicio.class);
-        spyManejadorConsultarCliente = spy(new ManejadorConsultarCliente(clienteServicio));
+        consultarClienteServicio = mock(ConsultarClienteServicio.class);
+        spyManejadorConsultarCliente = spy(new ManejadorConsultarCliente(consultarClienteServicio));
         MockitoAnnotations.initMocks(this);
     }
 
@@ -32,12 +32,12 @@ public class ManejadorConsultarClienteTest {
     public void ejecutarConsultaTest() {
         Cliente cliente = new ClienteFactory().buildCliente();
 
-        when(clienteServicio.consultarCliente()).thenReturn(Collections.singletonList(cliente));
+        when(consultarClienteServicio.consultarCliente()).thenReturn(Collections.singletonList(cliente));
 
         List<Cliente> listaClientes = spyManejadorConsultarCliente.ejecutar();
 
         assertEquals(Collections.singletonList(cliente), listaClientes);
-        verify(clienteServicio, times(1)).consultarCliente();
+        verify(consultarClienteServicio, times(1)).consultarCliente();
     }
 
 

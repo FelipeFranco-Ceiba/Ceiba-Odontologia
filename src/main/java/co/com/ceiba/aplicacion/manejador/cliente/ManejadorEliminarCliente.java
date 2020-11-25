@@ -1,8 +1,7 @@
 package co.com.ceiba.aplicacion.manejador.cliente;
 
 import co.com.ceiba.aplicacion.manejador.ManejadorComando;
-import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.servicio.IClienteServicio;
+import co.com.ceiba.dominio.servicio.cliente.EliminarClienteServicio;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class ManejadorEliminarCliente implements ManejadorComando<Long> {
 
-    private final IClienteServicio<Cliente> clienteServicio;
+    private final EliminarClienteServicio clienteServicio;
 
     @Override
     public void ejecutar(Long idCliente) {

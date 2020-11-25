@@ -5,6 +5,7 @@ import co.com.ceiba.aplicacion.fabrica.FabricaCliente;
 import co.com.ceiba.aplicacion.manejador.ManejadorComandoRespuesta;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
 import co.com.ceiba.dominio.servicio.IClienteServicio;
+import co.com.ceiba.dominio.servicio.cliente.CrearClienteServicio;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +13,11 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class ManejadorCrearCliente implements ManejadorComandoRespuesta<Cliente, ComandoCliente> {
 
-    private final IClienteServicio<Cliente> clienteServicio;
+    private final CrearClienteServicio crearClienteServicio;
 
     @Override
     public Cliente ejecutar(ComandoCliente comando) {
         Cliente cliente = FabricaCliente.crearCliente(comando);
-        return this.clienteServicio.crearOActualizarCliente(cliente);
+        return this.crearClienteServicio.crearOActualizarCliente(cliente);
     }
 }

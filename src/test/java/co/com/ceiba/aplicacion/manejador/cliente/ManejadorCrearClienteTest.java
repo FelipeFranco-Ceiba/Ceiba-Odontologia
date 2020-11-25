@@ -4,7 +4,7 @@ import co.com.ceiba.aplicacion.comando.ComandoCliente;
 import co.com.ceiba.aplicacion.fabrica.FabricaCliente;
 import co.com.ceiba.dominio.excepcion.ValorObligatorioExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.servicio.IClienteServicio;
+import co.com.ceiba.dominio.servicio.cliente.CrearClienteServicio;
 import co.com.ceiba.infraestructura.mockfactory.ClienteFactory;
 import co.com.ceiba.infraestructura.modelo.entidad.ClienteEntidad;
 import org.junit.Before;
@@ -21,13 +21,13 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class ManejadorCrearClienteTest {
 
-    private IClienteServicio<Cliente> clienteServicio;
+    private CrearClienteServicio crearClienteServicio;
     private ManejadorCrearCliente spyManejadorCrearCliente;
 
     @Before
     public void before() {
-        clienteServicio = mock(IClienteServicio.class);
-        spyManejadorCrearCliente = spy(new ManejadorCrearCliente(clienteServicio));
+        crearClienteServicio = mock(CrearClienteServicio.class);
+        spyManejadorCrearCliente = spy(new ManejadorCrearCliente(crearClienteServicio));
         MockitoAnnotations.initMocks(this);
     }
 
@@ -36,13 +36,13 @@ public class ManejadorCrearClienteTest {
         ComandoCliente comandoCliente = new ClienteFactory().buildComando();
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
 
-        when(clienteServicio.crearOActualizarCliente(cliente)).thenReturn(cliente);
+        when(crearClienteServicio.crearOActualizarCliente(cliente)).thenReturn(cliente);
 
         Cliente clienteCreado = spyManejadorCrearCliente.ejecutar(comandoCliente);
 
         assertEquals(cliente, clienteCreado);
 
-        verify(clienteServicio, times(1)).crearOActualizarCliente(any(Cliente.class));
+        verify(crearClienteServicio, times(1)).crearOActualizarCliente(any(Cliente.class));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ManejadorCrearClienteTest {
         ComandoCliente comandoCliente = new ClienteFactory().buildComando();
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
 
-        when(clienteServicio.crearOActualizarCliente(cliente)).thenThrow(new ValorObligatorioExcepcion(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS));
+        when(crearClienteServicio.crearOActualizarCliente(cliente)).thenThrow(new ValorObligatorioExcepcion(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS));
 
         try {
             spyManejadorCrearCliente.ejecutar(comandoCliente);
@@ -59,6 +59,6 @@ public class ManejadorCrearClienteTest {
             assertEquals(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS, error.getMessage());
         }
 
-        verify(clienteServicio, times(1)).crearOActualizarCliente(any(Cliente.class));
+        verify(crearClienteServicio, times(1)).crearOActualizarCliente(any(Cliente.class));
     }
 }
