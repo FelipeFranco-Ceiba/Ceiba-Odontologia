@@ -1,6 +1,6 @@
 package co.com.ceiba.dominio.servicio.impl;
 
-import co.com.ceiba.dominio.excepcion.CitaExcepcion;
+import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
 import co.com.ceiba.dominio.servicio.IClienteServicio;
 import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioCliente;
@@ -17,6 +17,7 @@ import java.util.List;
 public class ClienteServicioImpl implements IClienteServicio<Cliente> {
 
     private final IRepositorioCliente repositorioCliente;
+    public static final String ERROR_NO_EXISTE_CLIENTE = "No existe el cliente";
 
     @Override
     public List<Cliente> consultarCliente() {
@@ -46,6 +47,6 @@ public class ClienteServicioImpl implements IClienteServicio<Cliente> {
     private void existeCliente(Long idCliente) {
         Boolean existeCliente = repositorioCliente.existsByIdCliente(idCliente);
         if (!existeCliente)
-            throw new CitaExcepcion("No existe el cliente");
+            throw new ExistenciaPersonaExcepcion(ERROR_NO_EXISTE_CLIENTE);
     }
 }

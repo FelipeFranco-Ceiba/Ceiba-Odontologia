@@ -1,4 +1,4 @@
-package co.com.ceiba.aplicacion.consulta;
+package co.com.ceiba.aplicacion.manejador.cliente;
 
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
 import co.com.ceiba.dominio.servicio.IClienteServicio;
@@ -9,7 +9,7 @@ import java.util.List;
 
 @Component
 @AllArgsConstructor
-public class ManejadorListaCliente {
+public class ManejadorConsultarCliente  {
 
     private final IClienteServicio<Cliente> clienteServicio;
 

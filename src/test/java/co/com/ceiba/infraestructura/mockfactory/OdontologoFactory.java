@@ -43,7 +43,7 @@ public class OdontologoFactory {
             .conApellidos(APPELLIDOS)
             .conFechaIngreso(FormatearFecha.transformarStringToDate(FECHA_INGRESO_ODONTOLOGO))
             .conEstado(ESTADO)
-            .conDetalleCitas(new ArrayList<>())
+            .conDetalleCitas(null)
             .build();
     }
 }

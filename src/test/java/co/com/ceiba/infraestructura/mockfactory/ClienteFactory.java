@@ -11,7 +11,7 @@ public class ClienteFactory {
     private static final String NOMBRES = "Cliente";
     private static final String APPELLIDOS = "Prueba";
 
-    public Cliente build() {
+    public Cliente buildCliente() {
         return Cliente.builder()
                 .conIdCliente(ID_CLIENTE)
                 .conNombres(NOMBRES)

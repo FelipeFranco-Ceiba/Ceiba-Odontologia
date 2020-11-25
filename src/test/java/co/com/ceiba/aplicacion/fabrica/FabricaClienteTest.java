@@ -10,7 +10,7 @@ public class FabricaClienteTest {
 
     @Test
     public void crearCliente() {
-        Cliente clienteEsperado = new ClienteFactory().build();
+        Cliente clienteEsperado = new ClienteFactory().buildCliente();
         ComandoCliente comandoCliente = new ClienteFactory().buildComando();
 
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
