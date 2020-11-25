@@ -5,6 +5,8 @@ import co.com.ceiba.dominio.modelo.entidad.Login;
 
 public final class FabricarLogin {
 
+    private FabricarLogin() { }
+
     public static Login crearLogin(ComandoLogin comandoLogin) {
         return Login.builder()
                 .conIdLogin(comandoLogin.getIdLogin())

@@ -6,6 +6,8 @@ import co.com.ceiba.infraestructura.utilidades.FormatearFecha;
 
 public final class FabricaOdontologo {
 
+    private FabricaOdontologo() { }
+
     public static Odontologo crearOdontologo(ComandoOdontologo comandoOdontologo) {
         return Odontologo.builder()
                 .conIdOdontologo(comandoOdontologo.getIdOdontologo())

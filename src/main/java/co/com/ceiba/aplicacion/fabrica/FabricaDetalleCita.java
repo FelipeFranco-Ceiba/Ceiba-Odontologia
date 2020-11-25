@@ -6,6 +6,8 @@ import co.com.ceiba.infraestructura.utilidades.FormatearFecha;
 
 public final class FabricaDetalleCita {
 
+    private FabricaDetalleCita() { }
+
     public static DetalleCita crearDetalleCita(ComandoDetalleCita comandoDetalleCita) {
         return DetalleCita.builder()
                 .conIdDetalleCita(comandoDetalleCita.getIdDetalleCita())
