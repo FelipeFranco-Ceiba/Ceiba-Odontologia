@@ -1,12 +1,9 @@
 package co.com.ceiba.infraestructura.error;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
 @AllArgsConstructor
-@Builder(setterPrefix = "con")
 public class Error {
 
     private final String nombreExcepcion;
