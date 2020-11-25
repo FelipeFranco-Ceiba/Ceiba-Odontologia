@@ -31,11 +31,10 @@ public final class TransformadorCliente {
     }
 
     public static ClienteEntidad mapToClienteEntidad(Cliente cliente) {
-        return ClienteEntidad.builder()
-                .idCliente(cliente.getIdCliente())
-                .nombres(cliente.getNombres())
-                .apellidos(cliente.getApellidos())
-                .lstDetalleCita(new ArrayList<>())
-                .build();
+        return new ClienteEntidad(
+                cliente.getIdCliente(),
+                cliente.getNombres(),
+                cliente.getApellidos(),
+                new ArrayList<>());
     }
 }

@@ -43,13 +43,12 @@ public final class TransformadorOdontologo {
     }
 
     public static OdontologoEntidad mapToOdontologoEntidad(Odontologo odontologo) {
-        return OdontologoEntidad.builder()
-                .idOdontologo(odontologo.getIdOdontologo())
-                .nombres(odontologo.getNombres())
-                .apellidos(odontologo.getApellidos())
-                .fechaIngreso(odontologo.getFechaIngreso())
-                .estado(TransformadorOdontologo.transformarBooleanToString(odontologo.getEstado()))
-                .lstOdontologo(new ArrayList<>())
-                .build();
+        return new OdontologoEntidad(
+                odontologo.getIdOdontologo(),
+                odontologo.getNombres(),
+                odontologo.getApellidos(),
+                odontologo.getFechaIngreso(),
+                TransformadorOdontologo.transformarBooleanToString(odontologo.getEstado()),
+                new ArrayList<>());
     }
 }

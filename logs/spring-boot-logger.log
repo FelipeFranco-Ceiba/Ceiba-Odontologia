@@ -1712,3 +1712,141 @@ insert into db_ceiba_odontologia.detalle_cita (id_detalle_cita, id_cliente, fech
 2020-11-24 16:10:57,743 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-24 16:10:57,744 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2020-11-24 16:10:57,750 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2020-11-24 16:11:30,898 INFO org.springframework.boot.StartupInfoLogger [main] Starting CeibaOdontologiaApplication using Java 11.0.1 on FELIPE-BEDOYA with PID 7696 (D:\Workspace\Ceiba-Odontologia\build\classes\java\main started by felipe.bedoya in D:\Workspace\Ceiba-Odontologia)
+2020-11-24 16:11:30,902 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-24 16:11:31,777 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-24 16:11:31,902 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 113 ms. Found 4 JPA repository interfaces.
+2020-11-24 16:11:33,035 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-24 16:11:33,053 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-24 16:11:33,054 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-24 16:11:33,054 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-24 16:11:33,214 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-24 16:11:33,215 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2234 ms
+2020-11-24 16:11:33,483 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-24 16:11:33,498 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-24 16:11:33,904 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-24 16:11:33,986 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-24 16:11:34,087 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-24 16:11:34,179 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-24 16:11:34,354 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-24 16:11:34,625 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-24 16:11:34,701 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-24 16:11:34,729 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-24 16:11:34,733 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories…
+2020-11-24 16:11:35,589 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-24 16:11:35,600 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-24 16:11:36,143 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Spring Data repositories initialized!
+2020-11-24 16:11:36,152 INFO org.springframework.boot.StartupInfoLogger [main] Started CeibaOdontologiaApplication in 5.927 seconds (JVM running for 6.483)
+2020-11-24 16:11:37,983 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-24 16:11:37,983 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-11-24 16:11:37,984 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2020-11-24 16:31:06,364 INFO org.springframework.boot.StartupInfoLogger [main] Starting CeibaOdontologiaApplication using Java 11.0.1 on FELIPE-BEDOYA with PID 16088 (D:\Workspace\Ceiba-Odontologia\build\classes\java\main started by felipe.bedoya in D:\Workspace\Ceiba-Odontologia)
+2020-11-24 16:31:06,368 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-24 16:31:07,334 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-24 16:31:07,457 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 111 ms. Found 4 JPA repository interfaces.
+2020-11-24 16:31:08,518 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-24 16:31:08,535 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-24 16:31:08,535 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-24 16:31:08,536 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-24 16:31:08,658 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-24 16:31:08,658 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2196 ms
+2020-11-24 16:31:08,882 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-24 16:31:08,901 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-24 16:31:09,276 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-24 16:31:09,347 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-24 16:31:09,435 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-24 16:31:09,514 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-24 16:31:09,667 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-24 16:31:09,883 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-24 16:31:09,955 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-24 16:31:09,984 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-24 16:31:09,987 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories…
+2020-11-24 16:31:10,753 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-24 16:31:10,764 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-24 16:31:11,290 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Spring Data repositories initialized!
+2020-11-24 16:31:11,297 INFO org.springframework.boot.StartupInfoLogger [main] Started CeibaOdontologiaApplication in 5.547 seconds (JVM running for 6.139)
+2020-11-24 16:55:36,577 INFO org.springframework.boot.StartupInfoLogger [main] Starting CeibaOdontologiaApplication using Java 1.8.0_271 on FELIPE-BEDOYA with PID 9872 (D:\Workspace\Ceiba-Odontologia\build\classes\java\main started by felipe.bedoya in D:\Workspace\Ceiba-Odontologia)
+2020-11-24 16:55:36,581 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-24 16:55:37,412 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-24 16:55:37,501 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
+2020-11-24 16:55:38,585 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-24 16:55:38,596 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-24 16:55:38,597 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-24 16:55:38,597 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-24 16:55:38,711 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-24 16:55:38,712 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2070 ms
+2020-11-24 16:55:38,945 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-24 16:55:38,962 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-24 16:55:40,105 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-24 16:55:40,167 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-24 16:55:40,236 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-24 16:55:40,290 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-24 16:55:40,489 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-24 16:55:40,714 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-24 16:55:40,746 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-24 16:55:40,778 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-24 16:55:40,781 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories…
+2020-11-24 16:55:41,666 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-24 16:55:41,678 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-24 16:55:42,478 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Spring Data repositories initialized!
+2020-11-24 16:55:42,492 INFO org.springframework.boot.StartupInfoLogger [main] Started CeibaOdontologiaApplication in 6.554 seconds (JVM running for 7.135)
+2020-11-24 16:56:14,803 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-24 16:56:14,803 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-11-24 16:56:14,804 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2020-11-24 17:00:32,895 INFO org.springframework.boot.StartupInfoLogger [main] Starting CeibaOdontologiaApplication using Java 1.8.0_271 on FELIPE-BEDOYA with PID 14920 (D:\Workspace\Ceiba-Odontologia\build\classes\java\main started by felipe.bedoya in D:\Workspace\Ceiba-Odontologia)
+2020-11-24 17:00:32,901 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-24 17:00:33,917 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-24 17:00:34,101 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 169 ms. Found 4 JPA repository interfaces.
+2020-11-24 17:00:35,282 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-24 17:00:35,297 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-24 17:00:35,298 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-24 17:00:35,298 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-24 17:00:35,433 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-24 17:00:35,433 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2461 ms
+2020-11-24 17:00:35,699 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-24 17:00:35,721 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-24 17:00:36,848 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-24 17:00:36,925 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-24 17:00:37,059 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-24 17:00:37,222 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-24 17:00:37,427 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-24 17:00:37,703 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-24 17:00:37,753 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-24 17:00:37,783 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-24 17:00:37,787 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories…
+2020-11-24 17:00:38,848 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-24 17:00:38,865 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-24 17:00:39,801 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Spring Data repositories initialized!
+2020-11-24 17:00:39,810 INFO org.springframework.boot.StartupInfoLogger [main] Started CeibaOdontologiaApplication in 7.622 seconds (JVM running for 8.343)
+2020-11-24 17:00:43,290 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-24 17:00:43,290 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-11-24 17:00:43,292 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2020-11-24 17:03:33,145 INFO org.springframework.boot.StartupInfoLogger [main] Starting CeibaOdontologiaApplication using Java 1.8.0_271 on FELIPE-BEDOYA with PID 1692 (D:\Workspace\Ceiba-Odontologia\build\classes\java\main started by felipe.bedoya in D:\Workspace\Ceiba-Odontologia)
+2020-11-24 17:03:33,151 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-11-24 17:03:34,093 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-24 17:03:34,203 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 99 ms. Found 4 JPA repository interfaces.
+2020-11-24 17:03:35,355 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-11-24 17:03:35,369 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-24 17:03:35,370 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-11-24 17:03:35,370 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-24 17:03:35,499 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-11-24 17:03:35,499 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2274 ms
+2020-11-24 17:03:35,745 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-24 17:03:35,768 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-11-24 17:03:36,883 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-11-24 17:03:36,960 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-24 17:03:37,065 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-24 17:03:37,189 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-24 17:03:37,373 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-24 17:03:37,662 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-24 17:03:37,720 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-11-24 17:03:37,753 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-24 17:03:37,757 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories…
+2020-11-24 17:03:38,792 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-24 17:03:38,805 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-24 17:03:39,648 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Spring Data repositories initialized!
+2020-11-24 17:03:39,660 INFO org.springframework.boot.StartupInfoLogger [main] Started CeibaOdontologiaApplication in 7.208 seconds (JVM running for 7.873)
+2020-11-24 17:03:46,996 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-24 17:03:46,996 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-11-24 17:03:46,999 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2020-11-24 19:56:20,249 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h3m12s498ms145µs200ns).

@@ -1,7 +1,6 @@
 package co.com.ceiba.infraestructura.modelo.entidad;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,10 +9,15 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
+import static co.com.ceiba.dominio.excepcion.validacion.ValidadorArgumentos.validarObligatorio;
+
 @Entity
 @Table(name = "CLIENTE", schema = "DB_CEIBA_ODONTOLOGIA")
-@Data @AllArgsConstructor @NoArgsConstructor @Builder
+@Data @NoArgsConstructor @Builder
 public class ClienteEntidad implements Serializable {
+
+    private static final String SE_DEBE_INGRESAR_LOS_NOMBRES = "Se debe ingresar los nombres del cliente";
+    private static final String SE_DEBE_INGRESAR_LOS_APELLIDOS = "Se debe ingresar los apellidos del cliente";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +29,14 @@ public class ClienteEntidad implements Serializable {
     @JsonManagedReference
     @OneToMany(mappedBy = "clienteEntidad", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DetalleCitaEntidad> lstDetalleCita;
+
+    public ClienteEntidad(Long idCliente, String nombres, String apellidos, List<DetalleCitaEntidad> lstDetalleCita) {
+        validarObligatorio(nombres, SE_DEBE_INGRESAR_LOS_NOMBRES);
+        validarObligatorio(apellidos, SE_DEBE_INGRESAR_LOS_APELLIDOS);
+
+        this.idCliente = idCliente;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.lstDetalleCita = lstDetalleCita;
+    }
 }
