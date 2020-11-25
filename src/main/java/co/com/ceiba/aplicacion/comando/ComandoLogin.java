@@ -5,7 +5,6 @@ import lombok.*;
 @Getter
 @Setter
 @AllArgsConstructor
-@Builder(setterPrefix = "con")
 public class ComandoLogin {
 
     private Long idLogin;
