@@ -1,8 +1,10 @@
 package co.com.ceiba.infraestructura.controlador;
 
 import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
-import co.com.ceiba.aplicacion.consulta.ManejadorListaOdontologo;
-import co.com.ceiba.aplicacion.comando.ManejadorTransaccionOdontologo;
+import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorConsultarOdontologo;
+import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorActualizarOdontologo;
+import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorCrearOdontologo;
+import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorEliminarOdontologo;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,27 +16,29 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/odontologo")
 public class ControladorOdontologo {
 
-    private final ManejadorListaOdontologo manejadorListaOdontologo;
-    private final ManejadorTransaccionOdontologo manejadorTransaccionOdontologo;
+    private final ManejadorConsultarOdontologo manejadorConsultarOdontologo;
+    private final ManejadorCrearOdontologo manejadorCrearOdontologo;
+    private final ManejadorActualizarOdontologo manejadorActualizarOdontologo;
+    private final ManejadorEliminarOdontologo manejadorEliminarOdontologo;
 
     @GetMapping
     public ResponseEntity<?> consultaOdontolos() {
-        return ResponseEntity.ok(manejadorListaOdontologo.ejecutar());
+        return ResponseEntity.ok(this.manejadorConsultarOdontologo.ejecutar());
     }
 
     @PostMapping
     public ResponseEntity<?> crear(@RequestBody ComandoOdontologo comandoOdontologo) {
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(this.manejadorTransaccionOdontologo.ejecutarCreacion(comandoOdontologo));
+                .body(this.manejadorCrearOdontologo.ejecutar(comandoOdontologo));
     }
 
     @PutMapping
     public ResponseEntity<?> actualizar(@RequestBody ComandoOdontologo comandoOdontologo) {
-        return ResponseEntity.ok(this.manejadorTransaccionOdontologo.ejecutarActualizacion(comandoOdontologo));
+        return ResponseEntity.ok(this.manejadorActualizarOdontologo.ejecutar(comandoOdontologo));
     }
 
     @DeleteMapping(value = "/{idOdontologo}")
     public void eliminar(@PathVariable("idOdontologo") Long idOdontologo) {
-        this.manejadorTransaccionOdontologo.ejecutarEliminar(idOdontologo);
+        this.manejadorEliminarOdontologo.ejecutar(idOdontologo);
     }
 }

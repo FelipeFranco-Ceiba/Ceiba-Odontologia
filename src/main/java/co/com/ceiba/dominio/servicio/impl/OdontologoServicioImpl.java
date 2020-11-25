@@ -1,6 +1,7 @@
 package co.com.ceiba.dominio.servicio.impl;
 
 import co.com.ceiba.dominio.excepcion.CitaExcepcion;
+import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import co.com.ceiba.dominio.servicio.IOdontologoServicio;
 import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo;
@@ -55,7 +56,7 @@ public class OdontologoServicioImpl implements IOdontologoServicio {
                 .orElse(null);
 
         if (odontologo == null) {
-            throw new CitaExcepcion(ERROR_NO_EXISTE_ODONTOLOGO);
+            throw new ExistenciaPersonaExcepcion(ERROR_NO_EXISTE_ODONTOLOGO);
         }
         return odontologo;
     }

@@ -70,26 +70,26 @@ public class ControladorDetalleCitaTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.[1].horaCita").value(3L));
     }
 
-//    @Test
-//    public void actualizarDetalleCita() throws Exception {
-//        Long idDetalleCita = 3L;
-//        Long idOdontologo = 1L;
-//        Long idCliente = 1L;
-//        Long idLogin = 1L;
-//        Long horaCita = 4L;
-//        ComandoDetalleCita comandoDetalleCita = new DetalleCitaFactory().buildComando(idDetalleCita, idOdontologo, idCliente, idLogin, horaCita);
-//        mockMvc.perform(MockMvcRequestBuilders
-//                .put("/detalleCita")
-//                .content(objectMapper.writeValueAsString(comandoDetalleCita))
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .accept(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk());
-//
-//        mockMvc.perform(MockMvcRequestBuilders
-//                .get("/detalleCita")
-//                .accept(MediaType.APPLICATION_JSON))
-//                .andDo(print())
-//                .andExpect(status().isOk())
-//                .andExpect(MockMvcResultMatchers.jsonPath("$.[0].horaCita").value(horaCita));
-//    }
+    @Test
+    public void actualizarDetalleCita() throws Exception {
+        Long idDetalleCita = 3L;
+        Long idOdontologo = 1L;
+        Long idCliente = 1L;
+        Long idLogin = 1L;
+        Long horaCita = 4L;
+        ComandoDetalleCita comandoDetalleCita = new DetalleCitaFactory().buildComando(idDetalleCita, idOdontologo, idCliente, idLogin, horaCita);
+        mockMvc.perform(MockMvcRequestBuilders
+                .put("/detalleCita")
+                .content(objectMapper.writeValueAsString(comandoDetalleCita))
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
+        mockMvc.perform(MockMvcRequestBuilders
+                .get("/detalleCita")
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.[1].horaCita").value(horaCita));
+    }
 }

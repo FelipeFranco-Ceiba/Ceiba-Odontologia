@@ -1,6 +1,7 @@
 package co.com.ceiba.infraestructura.error;
 
 import co.com.ceiba.dominio.excepcion.CitaExcepcion;
+import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
 import co.com.ceiba.dominio.excepcion.ValorObligatorioExcepcion;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,7 @@ public class ManejadorError extends ResponseEntityExceptionHandler {
     public ManejadorError() {
         CODIGOS_ESTADO.put(CitaExcepcion.class.getSimpleName(), HttpStatus.BAD_REQUEST.value());
         CODIGOS_ESTADO.put(ValorObligatorioExcepcion.class.getSimpleName(), HttpStatus.BAD_REQUEST.value());
+        CODIGOS_ESTADO.put(ExistenciaPersonaExcepcion.class.getSimpleName(), HttpStatus.NO_CONTENT.value());
         //en caso de tener otra excepcion matricularla aca
     }
 

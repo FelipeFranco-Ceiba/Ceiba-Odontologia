@@ -1,4 +1,4 @@
-package co.com.ceiba.aplicacion.consulta;
+package co.com.ceiba.aplicacion.manejador.odontologo;
 
 import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import co.com.ceiba.dominio.servicio.IOdontologoServicio;
@@ -9,7 +9,7 @@ import java.util.List;
 
 @Component
 @AllArgsConstructor
-public class ManejadorListaOdontologo {
+public class ManejadorConsultarOdontologo {
 
     private final IOdontologoServicio odontologoServicio;
 
