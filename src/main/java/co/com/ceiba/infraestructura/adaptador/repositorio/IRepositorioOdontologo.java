@@ -30,20 +30,8 @@ public interface IRepositorioOdontologo extends JpaRepository<OdontologoEntidad,
     }
 
     @Override
-    default Boolean existeOdontologo(Long idOdontologo) {
-        return existsById(idOdontologo);
-    }
-
-    @Override
     default Optional<OdontologoEntidad> consultarOdontologoPorId(Long idOdontologo) {
         return findById(idOdontologo);
     }
 
-//    @Override
-//    default int sumarHorasTrabajadas(Long idOdontologo) {
-//        return sumarHoras(idOdontologo);
-//    }
-//
-//    @Query("SELECT od.horaCita FROM OdontologoEntidad.lstOdontologo od where od.idOdontologo = ?1")
-//    int sumarHoras(Long idOdontologo);
 }

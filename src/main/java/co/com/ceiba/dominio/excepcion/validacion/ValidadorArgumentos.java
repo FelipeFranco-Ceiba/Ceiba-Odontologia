@@ -4,8 +4,10 @@ import co.com.ceiba.dominio.excepcion.ValorObligatorioExcepcion;
 
 public class ValidadorArgumentos {
 
+    private ValidadorArgumentos() { }
+
     public static void validarObligatorio(Object argumento, String mensajeError) {
-        if (argumento == null || argumento.equals("")) {
+        if (argumento == null || "".equals(argumento)) {
             throw new ValorObligatorioExcepcion(mensajeError);
         }
     }

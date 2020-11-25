@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 public final class TransformadorDetalleCita {
 
+    private TransformadorDetalleCita() { }
+
     public static DetalleCita mapToDetalleCitaModelo(DetalleCitaEntidad detalleCitaEntidad) {
         return DetalleCita.builder()
                 .conIdDetalleCita(detalleCitaEntidad.getIdDetalleCita())

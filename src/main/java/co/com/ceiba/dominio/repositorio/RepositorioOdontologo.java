@@ -8,11 +8,8 @@ import java.util.Optional;
 
 public interface RepositorioOdontologo {
 
-    Boolean existeOdontologo(Long idOdontologo);
     List<Odontologo> consultarOdontologo();
     Odontologo crearOdontologo(OdontologoEntidad odontologo);
     Odontologo actualizarOdontologo(OdontologoEntidad odontologo);
     Optional<OdontologoEntidad> consultarOdontologoPorId(Long idOdontologo);
-
-//    int sumarHorasTrabajadas(Long idOdontologo);
 }

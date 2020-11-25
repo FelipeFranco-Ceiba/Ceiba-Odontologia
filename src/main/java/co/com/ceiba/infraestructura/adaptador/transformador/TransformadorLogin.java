@@ -8,6 +8,8 @@ import java.util.Optional;
 
 public final class TransformadorLogin {
 
+    private TransformadorLogin() { }
+
     public static Login mapToLoginModelo(LoginEntidad loginEntidad) {
         return Login.builder()
                 .conIdLogin(loginEntidad.getIdLogin())

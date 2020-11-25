@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 
 public final class TransformadorOdontologo {
 
+    private TransformadorOdontologo() { }
+
     public static Odontologo mapToOdontologoModelo(OdontologoEntidad odontologo) {
         return Odontologo.builder()
                 .conIdOdontologo(odontologo.getIdOdontologo())
@@ -21,7 +23,7 @@ public final class TransformadorOdontologo {
     }
 
     public static Boolean transformarStringToBoolean(String estado) {
-        return estado.equals("S");
+        return "S".equals(estado);
     }
 
     public static String transformarBooleanToString(Boolean estado) {
