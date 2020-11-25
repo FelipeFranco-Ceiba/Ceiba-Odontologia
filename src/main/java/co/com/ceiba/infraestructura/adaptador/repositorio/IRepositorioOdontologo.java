@@ -5,11 +5,9 @@ import co.com.ceiba.dominio.repositorio.RepositorioOdontologo;
 import co.com.ceiba.infraestructura.adaptador.transformador.TransformadorOdontologo;
 import co.com.ceiba.infraestructura.modelo.entidad.OdontologoEntidad;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public interface IRepositorioOdontologo extends JpaRepository<OdontologoEntidad, Long>, RepositorioOdontologo {
@@ -20,18 +18,22 @@ public interface IRepositorioOdontologo extends JpaRepository<OdontologoEntidad,
     }
 
     @Override
-    default Odontologo crearOdontologo(OdontologoEntidad odontologo) {
-        return TransformadorOdontologo.mapToOdontologoModelo(saveAndFlush(odontologo));
+    default Odontologo crearOdontologo(Odontologo odontologo) {
+        OdontologoEntidad odontologoEntidad = TransformadorOdontologo.mapToOdontologoEntidad(odontologo);
+        return TransformadorOdontologo.mapToOdontologoModelo(saveAndFlush(odontologoEntidad));
     }
 
     @Override
-    default Odontologo actualizarOdontologo(OdontologoEntidad odontologo) {
-        return TransformadorOdontologo.mapToOdontologoModelo(saveAndFlush(odontologo));
+    default Odontologo actualizarOdontologo(Odontologo odontologo) {
+        OdontologoEntidad odontologoEntidad = TransformadorOdontologo.mapToOdontologoEntidad(odontologo);
+        return TransformadorOdontologo.mapToOdontologoModelo(saveAndFlush(odontologoEntidad));
     }
 
     @Override
-    default Optional<OdontologoEntidad> consultarOdontologoPorId(Long idOdontologo) {
-        return findById(idOdontologo);
+    default Odontologo consultarOdontologoPorId(Long idOdontologo) {
+        return findById(idOdontologo)
+                .map(TransformadorOdontologo::mapToOdontologoModelo)
+                .orElse(null);
     }
 
 }

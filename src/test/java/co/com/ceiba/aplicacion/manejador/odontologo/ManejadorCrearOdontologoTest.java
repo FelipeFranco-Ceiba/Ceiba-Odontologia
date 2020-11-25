@@ -4,13 +4,14 @@ import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
 import co.com.ceiba.aplicacion.fabrica.FabricaOdontologo;
 import co.com.ceiba.dominio.excepcion.ValorObligatorioExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Odontologo;
-import co.com.ceiba.dominio.servicio.IOdontologoServicio;
+import co.com.ceiba.dominio.servicio.odontologo.CrearOdontologoServicio;
 import co.com.ceiba.infraestructura.mockfactory.OdontologoFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit4.SpringRunner;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
@@ -18,13 +19,13 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class ManejadorCrearOdontologoTest {
 
-    private IOdontologoServicio odontologoServicio;
+    private CrearOdontologoServicio crearOdontologoServicio;
     private ManejadorCrearOdontologo spyManejadorCrearOdontologo;
 
     @Before
     public void before() {
-        odontologoServicio = mock(IOdontologoServicio.class);
-        spyManejadorCrearOdontologo = spy(new ManejadorCrearOdontologo(odontologoServicio));
+        crearOdontologoServicio = mock(CrearOdontologoServicio.class);
+        spyManejadorCrearOdontologo = spy(new ManejadorCrearOdontologo(crearOdontologoServicio));
         MockitoAnnotations.initMocks(this);
     }
 
@@ -33,13 +34,13 @@ public class ManejadorCrearOdontologoTest {
         ComandoOdontologo comandoOdontologo = new OdontologoFactory().buildComando();
         Odontologo odontologo = FabricaOdontologo.crearOdontologo(comandoOdontologo);
 
-        when(odontologoServicio.crearOdontologo(odontologo)).thenReturn(odontologo);
+        when(crearOdontologoServicio.crearOdontologo(odontologo)).thenReturn(odontologo);
 
         Odontologo odontologoCreado = spyManejadorCrearOdontologo.ejecutar(comandoOdontologo);
 
         assertEquals(odontologo, odontologoCreado);
 
-        verify(odontologoServicio, times(1)).crearOdontologo(any(Odontologo.class));
+        verify(crearOdontologoServicio, times(1)).crearOdontologo(any(Odontologo.class));
     }
 
     @Test
@@ -47,7 +48,7 @@ public class ManejadorCrearOdontologoTest {
         ComandoOdontologo comandoOdontologo = new OdontologoFactory().buildComando();
         Odontologo odontologo = FabricaOdontologo.crearOdontologo(comandoOdontologo);
 
-        when(odontologoServicio.crearOdontologo(odontologo)).thenThrow(new ValorObligatorioExcepcion("Facke error"));
+        when(crearOdontologoServicio.crearOdontologo(odontologo)).thenThrow(new ValorObligatorioExcepcion("Facke error"));
 
         try {
             spyManejadorCrearOdontologo.ejecutar(comandoOdontologo);
@@ -56,6 +57,6 @@ public class ManejadorCrearOdontologoTest {
             assertEquals("Facke error", error.getMessage());
         }
 
-        verify(odontologoServicio, times(1)).crearOdontologo(any(Odontologo.class));
+        verify(crearOdontologoServicio, times(1)).crearOdontologo(any(Odontologo.class));
     }
 }

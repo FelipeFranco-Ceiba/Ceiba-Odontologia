@@ -1,17 +1,12 @@
 package co.com.ceiba.aplicacion.manejador.cliente;
 
 import co.com.ceiba.aplicacion.comando.ComandoCliente;
-import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
 import co.com.ceiba.aplicacion.fabrica.FabricaCliente;
-import co.com.ceiba.aplicacion.fabrica.FabricaOdontologo;
 import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import co.com.ceiba.dominio.servicio.IClienteServicio;
 import co.com.ceiba.dominio.servicio.impl.ClienteServicioImpl;
-import co.com.ceiba.dominio.servicio.impl.OdontologoServicioImpl;
 import co.com.ceiba.infraestructura.mockfactory.ClienteFactory;
-import co.com.ceiba.infraestructura.mockfactory.OdontologoFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

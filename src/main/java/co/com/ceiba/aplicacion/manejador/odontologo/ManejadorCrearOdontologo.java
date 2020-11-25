@@ -5,6 +5,7 @@ import co.com.ceiba.aplicacion.fabrica.FabricaOdontologo;
 import co.com.ceiba.aplicacion.manejador.ManejadorComandoRespuesta;
 import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import co.com.ceiba.dominio.servicio.IOdontologoServicio;
+import co.com.ceiba.dominio.servicio.odontologo.CrearOdontologoServicio;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +13,11 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class ManejadorCrearOdontologo implements ManejadorComandoRespuesta<Odontologo, ComandoOdontologo> {
 
-    private final IOdontologoServicio odontologoServicio;
+    private final CrearOdontologoServicio crearOdontologoServicio;
 
     @Override
     public Odontologo ejecutar(ComandoOdontologo comando) {
         Odontologo odontologo = FabricaOdontologo.crearOdontologo(comando);
-        return this.odontologoServicio.crearOdontologo(odontologo);
+        return this.crearOdontologoServicio.crearOdontologo(odontologo);
     }
 }

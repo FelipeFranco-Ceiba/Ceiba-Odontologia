@@ -1,7 +1,7 @@
 package co.com.ceiba.aplicacion.manejador.odontologo;
 
 import co.com.ceiba.dominio.modelo.entidad.Odontologo;
-import co.com.ceiba.dominio.servicio.IOdontologoServicio;
+import co.com.ceiba.dominio.servicio.odontologo.ConsultarOdontologoServicio;
 import co.com.ceiba.infraestructura.mockfactory.OdontologoFactory;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,13 +18,13 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class ManejadorConsultarOdontologoTest {
 
-    private IOdontologoServicio odontologoServicio;
+    private ConsultarOdontologoServicio consultarOdontologoServicio;
     private ManejadorConsultarOdontologo spyManejadorConsultaOdontologo;
 
     @Before
     public void before() {
-        odontologoServicio = mock(IOdontologoServicio.class);
-        spyManejadorConsultaOdontologo = spy(new ManejadorConsultarOdontologo(odontologoServicio));
+        consultarOdontologoServicio = mock(ConsultarOdontologoServicio.class);
+        spyManejadorConsultaOdontologo = spy(new ManejadorConsultarOdontologo(consultarOdontologoServicio));
         MockitoAnnotations.initMocks(this);
     }
 
@@ -32,12 +32,12 @@ public class ManejadorConsultarOdontologoTest {
     public void ejecutarConsultaTest() {
         Odontologo odontologo = new OdontologoFactory().buildOdontologo();
 
-        when(odontologoServicio.consultarOdontologo()).thenReturn(Collections.singletonList(odontologo));
+        when(consultarOdontologoServicio.consultarOdontologo()).thenReturn(Collections.singletonList(odontologo));
 
         List<Odontologo> listaOdontologos = spyManejadorConsultaOdontologo.ejecutar();
 
         assertEquals(Collections.singletonList(odontologo), listaOdontologos);
-        verify(odontologoServicio, times(1)).consultarOdontologo();
+        verify(consultarOdontologoServicio, times(1)).consultarOdontologo();
     }
 
 }
