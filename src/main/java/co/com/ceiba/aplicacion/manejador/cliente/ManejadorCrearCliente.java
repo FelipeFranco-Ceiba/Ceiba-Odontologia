@@ -4,7 +4,6 @@ import co.com.ceiba.aplicacion.comando.ComandoCliente;
 import co.com.ceiba.aplicacion.fabrica.FabricaCliente;
 import co.com.ceiba.aplicacion.manejador.ManejadorComandoRespuesta;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.servicio.IClienteServicio;
 import co.com.ceiba.dominio.servicio.cliente.CrearClienteServicio;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -18,6 +17,6 @@ public class ManejadorCrearCliente implements ManejadorComandoRespuesta<Cliente,
     @Override
     public Cliente ejecutar(ComandoCliente comando) {
         Cliente cliente = FabricaCliente.crearCliente(comando);
-        return this.crearClienteServicio.crearOActualizarCliente(cliente);
+        return this.crearClienteServicio.crearCliente(cliente);
     }
 }

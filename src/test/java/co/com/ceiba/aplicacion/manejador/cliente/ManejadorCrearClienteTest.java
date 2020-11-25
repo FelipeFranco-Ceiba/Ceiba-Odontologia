@@ -36,13 +36,13 @@ public class ManejadorCrearClienteTest {
         ComandoCliente comandoCliente = new ClienteFactory().buildComando();
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
 
-        when(crearClienteServicio.crearOActualizarCliente(cliente)).thenReturn(cliente);
+        when(crearClienteServicio.crearCliente(cliente)).thenReturn(cliente);
 
         Cliente clienteCreado = spyManejadorCrearCliente.ejecutar(comandoCliente);
 
         assertEquals(cliente, clienteCreado);
 
-        verify(crearClienteServicio, times(1)).crearOActualizarCliente(any(Cliente.class));
+        verify(crearClienteServicio, times(1)).crearCliente(any(Cliente.class));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ManejadorCrearClienteTest {
         ComandoCliente comandoCliente = new ClienteFactory().buildComando();
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
 
-        when(crearClienteServicio.crearOActualizarCliente(cliente)).thenThrow(new ValorObligatorioExcepcion(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS));
+        when(crearClienteServicio.crearCliente(cliente)).thenThrow(new ValorObligatorioExcepcion(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS));
 
         try {
             spyManejadorCrearCliente.ejecutar(comandoCliente);
@@ -59,6 +59,6 @@ public class ManejadorCrearClienteTest {
             assertEquals(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS, error.getMessage());
         }
 
-        verify(crearClienteServicio, times(1)).crearOActualizarCliente(any(Cliente.class));
+        verify(crearClienteServicio, times(1)).crearCliente(any(Cliente.class));
     }
 }

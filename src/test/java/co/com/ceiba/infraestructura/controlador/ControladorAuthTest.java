@@ -1,8 +1,6 @@
 package co.com.ceiba.infraestructura.controlador;
 
-import co.com.ceiba.aplicacion.comando.ComandoCliente;
 import co.com.ceiba.aplicacion.comando.ComandoLogin;
-import co.com.ceiba.infraestructura.mockfactory.ClienteFactory;
 import co.com.ceiba.infraestructura.mockfactory.LoginFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
@@ -17,9 +15,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ContextConfiguration

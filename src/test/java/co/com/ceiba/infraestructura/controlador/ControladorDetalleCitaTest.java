@@ -1,9 +1,7 @@
 package co.com.ceiba.infraestructura.controlador;
 
 import co.com.ceiba.aplicacion.comando.ComandoDetalleCita;
-import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
 import co.com.ceiba.infraestructura.mockfactory.DetalleCitaFactory;
-import co.com.ceiba.infraestructura.mockfactory.OdontologoFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;

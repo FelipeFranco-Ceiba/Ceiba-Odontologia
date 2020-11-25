@@ -6,7 +6,6 @@ import co.com.ceiba.aplicacion.manejador.cliente.ManejadorConsultarCliente;
 import co.com.ceiba.aplicacion.manejador.cliente.ManejadorCrearCliente;
 import co.com.ceiba.aplicacion.manejador.cliente.ManejadorEliminarCliente;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
