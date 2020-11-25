@@ -4,7 +4,6 @@ import lombok.*;
 
 @AllArgsConstructor
 @Getter
-@Setter
 @Builder(setterPrefix = "con")
 public class ComandoDetalleCita {
 

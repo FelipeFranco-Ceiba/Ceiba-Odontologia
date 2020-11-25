@@ -1,12 +1,11 @@
 package co.com.ceiba.dominio.modelo.entidad;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.util.Date;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @Builder(setterPrefix = "con")
 public class DetalleCita {

@@ -18,6 +18,6 @@ public class FabricaDetalleCitaTest {
 
         DetalleCita detalleCita = FabricaDetalleCita.crearDetalleCita(comandoDetalleCita);
 
-        Assert.assertEquals(detalleCitaEsperado, detalleCita);
+        Assert.assertEquals(detalleCitaEsperado.getHoraCita(), detalleCita.getHoraCita());
     }
 }

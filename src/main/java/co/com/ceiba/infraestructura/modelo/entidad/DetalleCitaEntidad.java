@@ -3,7 +3,7 @@ package co.com.ceiba.infraestructura.modelo.entidad;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "DETALLE_CITA", schema = "DB_CEIBA_ODONTOLOGIA")
-@Data
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

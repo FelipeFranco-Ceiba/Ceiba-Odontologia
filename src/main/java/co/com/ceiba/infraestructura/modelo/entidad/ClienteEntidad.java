@@ -2,7 +2,7 @@ package co.com.ceiba.infraestructura.modelo.entidad;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -13,7 +13,8 @@ import static co.com.ceiba.dominio.excepcion.validacion.ValidadorArgumentos.vali
 
 @Entity
 @Table(name = "CLIENTE", schema = "DB_CEIBA_ODONTOLOGIA")
-@Data @NoArgsConstructor @Builder
+@Getter
+@NoArgsConstructor @Builder
 public class ClienteEntidad implements Serializable {
 
     private static final long serialVersionUID = 8434850033473170469L;

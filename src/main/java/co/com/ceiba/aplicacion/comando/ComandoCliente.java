@@ -1,10 +1,9 @@
 package co.com.ceiba.aplicacion.comando;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @Builder(setterPrefix = "con")
 public class ComandoCliente {

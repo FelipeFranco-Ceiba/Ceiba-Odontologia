@@ -13,8 +13,9 @@ import java.util.Optional;
 public interface IRepositorioLogin extends JpaRepository<LoginEntidad, Long>, RespositorioLogin {
 
     @Override
-    default Login crearDetalleCita(LoginEntidad loginEntidad) {
-        return TransformadorLogin.mapToLoginModelo(save(loginEntidad));
+    default Login crearUsuario(LoginEntidad loginEntidad) {
+        Login login = TransformadorLogin.mapToLoginModelo(saveAndFlush(loginEntidad));
+        return login;
     }
 
     @Override

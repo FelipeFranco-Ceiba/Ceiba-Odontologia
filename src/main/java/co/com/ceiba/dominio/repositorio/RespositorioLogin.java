@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface RespositorioLogin {
 
-    Login crearDetalleCita(LoginEntidad loginEntidad);
+    Login crearUsuario(LoginEntidad loginEntidad);
 
     Optional<Login> buscarLoginPorUsuarioYClave(String usuario, String clave);
 
