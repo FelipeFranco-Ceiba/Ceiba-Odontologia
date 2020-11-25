@@ -17,7 +17,7 @@ public class ControladorAuth {
     private final ManejadorTransaccionLogin manejadorTransaccionLogin;
 
     @PostMapping
-    public ResponseEntity<?> crearLogin(@RequestBody ComandoLogin comandoLogin) {
+    public ResponseEntity<Login> crearLogin(@RequestBody ComandoLogin comandoLogin) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(this.manejadorTransaccionLogin.ejecutarCreacion(comandoLogin));
     }

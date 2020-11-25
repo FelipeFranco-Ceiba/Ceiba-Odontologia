@@ -5,10 +5,14 @@ import co.com.ceiba.aplicacion.manejador.cliente.ManejadorActualizarCliente;
 import co.com.ceiba.aplicacion.manejador.cliente.ManejadorConsultarCliente;
 import co.com.ceiba.aplicacion.manejador.cliente.ManejadorCrearCliente;
 import co.com.ceiba.aplicacion.manejador.cliente.ManejadorEliminarCliente;
+import co.com.ceiba.dominio.modelo.entidad.Cliente;
+import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -22,18 +26,18 @@ public class ControladorCliente {
     private final ManejadorEliminarCliente manejadorEliminarCliente;
 
     @GetMapping
-    public ResponseEntity<?> consultarCliente() {
+    public ResponseEntity<List<Cliente>> consultarCliente() {
         return ResponseEntity.ok(this.manejadorConsultarCliente.ejecutar());
     }
 
     @PostMapping
-    public ResponseEntity<?> crear(@RequestBody ComandoCliente comandoCliente) {
+    public ResponseEntity<Cliente> crear(@RequestBody ComandoCliente comandoCliente) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(this.manejadorCrearCliente.ejecutar(comandoCliente));
     }
 
     @PutMapping
-    public ResponseEntity<?> actualizar(@RequestBody ComandoCliente comandoCliente) {
+    public ResponseEntity<Cliente> actualizar(@RequestBody ComandoCliente comandoCliente) {
         return ResponseEntity.ok(this.manejadorActualizarCliente.ejecutar(comandoCliente));
     }
 

@@ -83,7 +83,6 @@ public class DetalleCitaServicioImpl implements IDetalleCitaServicio<DetalleCita
         repositorioDetalleCita.eliminarDetalleCita(idDetalleCita);
     }
 
-    @Transactional
     private void existeDetalleCita(Long idDetalleCita) {
         Boolean existeDetalleCita = repositorioDetalleCita.existeDetalleCita(idDetalleCita);
         if (!existeDetalleCita)

@@ -36,7 +36,7 @@ public class FormatearFechaTest {
             FormatearFecha.transformarStringToDate(fechaPrueba);
         } catch (Exception e) {
             Assert.assertTrue(e instanceof CitaExcepcion);
-            Assert.assertEquals(e.getMessage(), ERROR_FORMATEANDO_FECHA);
+            Assert.assertEquals(ERROR_FORMATEANDO_FECHA, e.getMessage());
 
         }
     }

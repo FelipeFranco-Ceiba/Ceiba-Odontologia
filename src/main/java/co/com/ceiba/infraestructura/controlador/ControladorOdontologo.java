@@ -5,10 +5,13 @@ import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorConsultarOdontologo
 import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorActualizarOdontologo;
 import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorCrearOdontologo;
 import co.com.ceiba.aplicacion.manejador.odontologo.ManejadorEliminarOdontologo;
+import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -22,18 +25,18 @@ public class ControladorOdontologo {
     private final ManejadorEliminarOdontologo manejadorEliminarOdontologo;
 
     @GetMapping
-    public ResponseEntity<?> consultaOdontolos() {
+    public ResponseEntity<List<Odontologo>> consultaOdontolos() {
         return ResponseEntity.ok(this.manejadorConsultarOdontologo.ejecutar());
     }
 
     @PostMapping
-    public ResponseEntity<?> crear(@RequestBody ComandoOdontologo comandoOdontologo) {
+    public ResponseEntity<Odontologo> crear(@RequestBody ComandoOdontologo comandoOdontologo) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(this.manejadorCrearOdontologo.ejecutar(comandoOdontologo));
     }
 
     @PutMapping
-    public ResponseEntity<?> actualizar(@RequestBody ComandoOdontologo comandoOdontologo) {
+    public ResponseEntity<Odontologo> actualizar(@RequestBody ComandoOdontologo comandoOdontologo) {
         return ResponseEntity.ok(this.manejadorActualizarOdontologo.ejecutar(comandoOdontologo));
     }
 

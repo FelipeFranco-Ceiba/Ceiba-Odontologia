@@ -1,6 +1,5 @@
 package co.com.ceiba.infraestructura.modelo.entidad;
 
-import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
