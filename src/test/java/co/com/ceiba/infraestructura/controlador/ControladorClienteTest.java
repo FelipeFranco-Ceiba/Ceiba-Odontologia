@@ -89,11 +89,5 @@ public class ControladorClienteTest {
         mockMvc.perform(MockMvcRequestBuilders
                 .delete("/cliente/{idCliente}", 1))
                 .andExpect(status().isOk());
-
-        mockMvc.perform(MockMvcRequestBuilders
-                .get("/cliente")
-                .accept(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(status().isOk());
     }
 }

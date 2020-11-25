@@ -92,4 +92,11 @@ public class ControladorDetalleCitaTest {
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.[1].horaCita").value(horaCita));
     }
+
+    @Test
+    public void eliminarDetalleCita() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders
+                .delete("/detalleCita/{idDetalleCita}", 1))
+                .andExpect(status().isOk());
+    }
 }

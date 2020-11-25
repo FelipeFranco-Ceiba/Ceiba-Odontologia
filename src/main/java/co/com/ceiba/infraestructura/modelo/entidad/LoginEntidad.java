@@ -19,6 +19,8 @@ import java.util.List;
 @Builder
 public class LoginEntidad implements Serializable {
 
+    private static final long serialVersionUID = 638104251721285160L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idLogin;

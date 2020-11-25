@@ -18,6 +18,8 @@ import java.util.Date;
 @Builder
 public class DetalleCitaEntidad implements Serializable {
 
+    private static final long serialVersionUID = 7617811362219595918L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idDetalleCita;

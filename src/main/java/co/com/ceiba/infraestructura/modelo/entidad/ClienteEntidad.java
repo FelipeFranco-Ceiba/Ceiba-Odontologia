@@ -16,6 +16,8 @@ import static co.com.ceiba.dominio.excepcion.validacion.ValidadorArgumentos.vali
 @Data @NoArgsConstructor @Builder
 public class ClienteEntidad implements Serializable {
 
+    private static final long serialVersionUID = 8434850033473170469L;
+
     public static final String SE_DEBE_INGRESAR_LOS_NOMBRES = "Se debe ingresar los nombres del cliente";
     public static final String SE_DEBE_INGRESAR_LOS_APELLIDOS = "Se debe ingresar los apellidos del cliente";
 

@@ -17,6 +17,9 @@ import static co.com.ceiba.dominio.excepcion.validacion.ValidadorArgumentos.vali
 @Data @NoArgsConstructor @Builder
 public class OdontologoEntidad implements Serializable {
 
+
+    private static final long serialVersionUID = 4251732736961477642L;
+
     private static final String SE_DEBE_INGRESAR_LOS_NOMBRES = "Se debe ingresar los nombres del odontologo";
     private static final String SE_DEBE_INGRESAR_LOS_APELLIDOS = "Se debe ingresar los apellidos del odontologo";
     private static final String SE_DEBE_INGRESAR_LA_FECHA_INGRESO = "Se debe ingresar la fecha de ingteso del odontologo";
