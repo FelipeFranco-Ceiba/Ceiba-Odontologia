@@ -1,10 +1,10 @@
 package co.com.ceiba.infraestructura.controlador;
 
 import co.com.ceiba.aplicacion.comando.ComandoDetalleCita;
-import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorActualizarDetalleCita;
-import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorConsultarDetalleCita;
-import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorCrearDetalleCita;
-import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorEliminarDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detallecita.ManejadorActualizarDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detallecita.ManejadorConsultarDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detallecita.ManejadorCrearDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detallecita.ManejadorEliminarDetalleCita;
 import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package co.com.ceiba.aplicacion.manejador.detalleCita;
+package co.com.ceiba.aplicacion.manejador.detallecita;
 
 import co.com.ceiba.aplicacion.manejador.ManejadorComando;
 import co.com.ceiba.dominio.servicio.detallecita.EliminarDetalleCitaService;
