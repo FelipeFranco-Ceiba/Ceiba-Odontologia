@@ -4,7 +4,6 @@ import co.com.ceiba.aplicacion.comando.ComandoOdontologo;
 import co.com.ceiba.aplicacion.fabrica.FabricaOdontologo;
 import co.com.ceiba.aplicacion.manejador.ManejadorComandoRespuesta;
 import co.com.ceiba.dominio.modelo.entidad.Odontologo;
-import co.com.ceiba.dominio.servicio.IOdontologoServicio;
 import co.com.ceiba.dominio.servicio.odontologo.ActualizarOdontologoServicio;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

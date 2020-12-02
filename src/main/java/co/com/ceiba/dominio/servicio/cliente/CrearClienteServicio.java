@@ -12,7 +12,6 @@ public class CrearClienteServicio {
 
     private final IRepositorioCliente repositorioCliente;
 
-    @Transactional
     public Cliente crearCliente(Cliente cliente) {
         return repositorioCliente.crearCliente(cliente);
     }

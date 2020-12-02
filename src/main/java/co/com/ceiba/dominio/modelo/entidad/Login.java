@@ -1,20 +1,31 @@
 package co.com.ceiba.dominio.modelo.entidad;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 
 import java.util.Objects;
 
+import static co.com.ceiba.dominio.excepcion.validacion.ValidadorArgumentos.validarObligatorio;
+
 @Getter
-@AllArgsConstructor
 @Builder(setterPrefix = "con")
 public class Login {
+
+    public static final String SE_DEBE_INGRESAR_EL_USUARIO = "Se debe ingresar el usuario";
+    public static final String SE_DEBE_INGRESAR_LA_CLAVE = "Se debe ingresar la clave";
 
     private Long idLogin;
     private String usuario;
     private String clave;
+
+    public Login(Long idLogin, String usuario, String clave) {
+        validarObligatorio(usuario, SE_DEBE_INGRESAR_EL_USUARIO);
+        validarObligatorio(clave, SE_DEBE_INGRESAR_LA_CLAVE);
+
+        this.idLogin = idLogin;
+        this.usuario = usuario;
+        this.clave = clave;
+    }
 
     @Override
     public boolean equals(Object o) {

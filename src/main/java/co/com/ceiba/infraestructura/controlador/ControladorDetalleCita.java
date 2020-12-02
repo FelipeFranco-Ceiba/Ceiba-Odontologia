@@ -1,10 +1,11 @@
 package co.com.ceiba.infraestructura.controlador;
 
 import co.com.ceiba.aplicacion.comando.ComandoDetalleCita;
-import co.com.ceiba.aplicacion.comando.ManejadorTransaccionDetalleCita;
-import co.com.ceiba.aplicacion.consulta.ManejadorListaDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorActualizarDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorConsultarDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorCrearDetalleCita;
+import co.com.ceiba.aplicacion.manejador.detalleCita.ManejadorEliminarDetalleCita;
 import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
-import co.com.ceiba.dominio.modelo.entidad.Odontologo;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,26 +19,28 @@ import java.util.List;
 @RequestMapping(value = "detalleCita")
 public class ControladorDetalleCita {
 
-    private final ManejadorListaDetalleCita manejadorListaDetalleCita;
-    private final ManejadorTransaccionDetalleCita manejadorTransaccionDetalleCita;
+    private final ManejadorConsultarDetalleCita manejadorConsultarDetalleCita;
+    private final ManejadorCrearDetalleCita manejadorCrearDetalleCita;
+    private final ManejadorActualizarDetalleCita manejadorActualizarDetalleCita;
+    private final ManejadorEliminarDetalleCita manejadorEliminarDetalleCita;
 
     @GetMapping
     public ResponseEntity<List<DetalleCita>> consultarDetalleCita() {
-        return ResponseEntity.ok(this.manejadorListaDetalleCita.ejecutar());
+        return ResponseEntity.ok(this.manejadorConsultarDetalleCita.ejecutar());
     }
     @PostMapping
     public ResponseEntity<DetalleCita> crear(@RequestBody ComandoDetalleCita comandoDetalleCita) {
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(this.manejadorTransaccionDetalleCita.ejecutarCreacion(comandoDetalleCita));
+                .body(this.manejadorCrearDetalleCita.ejecutar(comandoDetalleCita));
     }
 
     @PutMapping
     public ResponseEntity<DetalleCita> actualizar(@RequestBody ComandoDetalleCita comandoDetalleCita) {
-        return ResponseEntity.ok(this.manejadorTransaccionDetalleCita.ejecutarActualizacion(comandoDetalleCita));
+        return ResponseEntity.ok(this.manejadorActualizarDetalleCita.ejecutar(comandoDetalleCita));
     }
 
     @DeleteMapping(value = "/{idDetalleCita}")
     public void eliminar(@PathVariable("idDetalleCita") Long idDetalleCita) {
-        this.manejadorTransaccionDetalleCita.ejecutarEliminar(idDetalleCita);
+        this.manejadorEliminarDetalleCita.ejecutar(idDetalleCita);
     }
 }

@@ -13,7 +13,6 @@ public class EliminarClienteServicio {
     private final IRepositorioCliente repositorioCliente;
     public static final String ERROR_NO_EXISTE_CLIENTE = "No existe el cliente";
 
-    @Transactional
     public void eliminarCliente(Long idCliente) {
         existeCliente(idCliente);
         repositorioCliente.eliminarClientePorId(idCliente);

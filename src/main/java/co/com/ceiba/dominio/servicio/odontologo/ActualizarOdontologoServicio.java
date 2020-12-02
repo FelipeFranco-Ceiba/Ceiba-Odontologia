@@ -14,7 +14,6 @@ public class ActualizarOdontologoServicio {
     private final IRepositorioOdontologo repositorioOdontologo;
     public static final String ERROR_NO_EXISTE_ODONTOLOGO = "No existe el odontologo";
 
-    @Transactional
     public Odontologo actualizarOdontologo(Odontologo odontologo) {
         existeOdontologo(odontologo.getIdOdontologo());
         return repositorioOdontologo.actualizarOdontologo(odontologo);

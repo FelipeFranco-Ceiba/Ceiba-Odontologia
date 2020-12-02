@@ -7,12 +7,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import static co.com.ceiba.dominio.excepcion.validacion.ValidadorArgumentos.validarObligatorio;
+
 @Getter
-@Setter
-@AllArgsConstructor
 @Builder(setterPrefix = "con")
 public class Odontologo {
 
+    private static final String SE_DEBE_INGRESAR_LOS_NOMBRES = "Se debe ingresar los nombres del odontologo";
+    private static final String SE_DEBE_INGRESAR_LOS_APELLIDOS = "Se debe ingresar los apellidos del odontologo";
+    private static final String SE_DEBE_INGRESAR_LA_FECHA_INGRESO = "Se debe ingresar la fecha de ingteso del odontologo";
 
     private Long    idOdontologo;
     private String  nombres;
@@ -20,6 +23,31 @@ public class Odontologo {
     private Date    fechaIngreso;
     private Boolean  estado;
     private List<DetalleCitaEntidad> detalleCitas;
+
+    public Odontologo(Long idOdontologo, String nombres, String apellidos, Date fechaIngreso, Boolean estado, List<DetalleCitaEntidad> lstOdontologo) {
+        validarObligatorio(nombres, SE_DEBE_INGRESAR_LOS_NOMBRES);
+        validarObligatorio(apellidos, SE_DEBE_INGRESAR_LOS_APELLIDOS);
+        validarObligatorio(fechaIngreso, SE_DEBE_INGRESAR_LOS_APELLIDOS);
+
+        this.idOdontologo = idOdontologo;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.fechaIngreso = fechaIngreso;
+        this.estado = estado;
+        this.detalleCitas = lstOdontologo;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
 
     @Override
     public boolean equals(Object o) {
