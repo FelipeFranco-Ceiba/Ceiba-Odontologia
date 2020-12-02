@@ -37,14 +37,6 @@ public class Odontologo {
         this.detalleCitas = lstOdontologo;
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }

@@ -8,8 +8,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.Assert;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
@@ -35,7 +37,7 @@ public class CrearClienteServicioTest {
         Cliente clienteCreado = spyCrearClienteServicio.crearCliente(cliente);
 
         assertEquals(cliente, clienteCreado);
-
+        assertEquals(cliente.hashCode(), clienteCreado.hashCode());
         verify(repositorioCliente, times(1)).crearCliente(any(Cliente.class));
     }
 }

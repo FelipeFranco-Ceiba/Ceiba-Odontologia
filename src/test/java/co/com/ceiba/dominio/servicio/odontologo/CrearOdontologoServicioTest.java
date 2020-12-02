@@ -31,7 +31,7 @@ public class CrearOdontologoServicioTest {
         Odontologo odontologoCreado = spyCrearOdontologoServicio.crearOdontologo(odontologo);
 
         assertEquals(odontologo, odontologoCreado);
-
+        assertEquals(odontologo.hashCode(), odontologoCreado.hashCode());
         verify(repositorioOdontologo, times(1)).crearOdontologo(any(Odontologo.class));
     }
 }

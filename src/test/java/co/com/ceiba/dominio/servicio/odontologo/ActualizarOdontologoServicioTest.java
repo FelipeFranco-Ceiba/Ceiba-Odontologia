@@ -40,7 +40,7 @@ public class ActualizarOdontologoServicioTest {
         Odontologo odontologoActualizado = spyActualizarOdontologoServicio.actualizarOdontologo(odontologo);
 
         assertEquals(odontologo, odontologoActualizado);
-
+        assertEquals(odontologo.hashCode(), odontologoActualizado.hashCode());
         verify(spyActualizarOdontologoServicio, times(1)).existeOdontologo(anyLong());
         verify(repositorioOdontologo, times(1)).actualizarOdontologo(any(Odontologo.class));
     }

@@ -41,7 +41,7 @@ public class ActualizarClienteServicioTest {
         Cliente clienteActualizado = spyActualizarClienteService.actualizarCliente(cliente);
 
         assertEquals(cliente, clienteActualizado);
-
+        assertEquals(cliente.hashCode(), clienteActualizado.hashCode());
         verify(spyActualizarClienteService, times(1)).existeCliente(anyLong());
         verify(repositorioCliente, times(1)).actualizarCliente(any(Cliente.class));
     }
