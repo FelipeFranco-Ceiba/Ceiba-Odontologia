@@ -26,7 +26,7 @@ public final class TransformadorOdontologo {
         return "S".equals(estado);
     }
 
-    public static String transformarBooleanToString(Boolean estado) {
+    public static String transformarBooleanToString(boolean estado) {
         return estado ? "S" : "N";
     }
 

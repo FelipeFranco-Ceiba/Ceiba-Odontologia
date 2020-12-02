@@ -11,5 +11,5 @@ public interface RespositorioLogin {
 
     Optional<Login> buscarLoginPorUsuarioYClave(String usuario, String clave);
 
-    Boolean existeUsuarioRegistrado(String usuario);
+    boolean existeUsuarioRegistrado(String usuario);
 }

@@ -36,4 +36,9 @@ public class Login {
                 Objects.equals(usuario, login.usuario) &&
                 Objects.equals(clave, login.clave);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idLogin, usuario, clave);
+    }
 }

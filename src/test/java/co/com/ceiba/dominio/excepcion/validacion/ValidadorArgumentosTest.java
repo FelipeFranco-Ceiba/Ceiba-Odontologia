@@ -1,7 +1,7 @@
 package co.com.ceiba.dominio.excepcion.validacion;
 
 import co.com.ceiba.dominio.excepcion.ValorObligatorioExcepcion;
-import co.com.ceiba.infraestructura.modelo.entidad.ClienteEntidad;
+import co.com.ceiba.dominio.modelo.entidad.Cliente;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,21 +11,20 @@ public class ValidadorArgumentosTest {
     public void validarObligatorioNombreVacio() {
         String nombresPrueba = "";
         try {
-            ValidadorArgumentos.validarObligatorio(nombresPrueba, ClienteEntidad.SE_DEBE_INGRESAR_LOS_NOMBRES);
+            ValidadorArgumentos.validarObligatorio(nombresPrueba, Cliente.SE_DEBE_INGRESAR_LOS_NOMBRES);
         } catch (Exception error) {
             Assert.assertTrue(error instanceof ValorObligatorioExcepcion);
-            Assert.assertEquals(ClienteEntidad.SE_DEBE_INGRESAR_LOS_NOMBRES, error.getMessage());
+            Assert.assertEquals(Cliente.SE_DEBE_INGRESAR_LOS_NOMBRES, error.getMessage());
         }
     }
 
     @Test
     public void validarObligatorioNombreNoExiste() {
-        String nombresPrueba = null;
         try {
-            ValidadorArgumentos.validarObligatorio(nombresPrueba, ClienteEntidad.SE_DEBE_INGRESAR_LOS_NOMBRES);
+            ValidadorArgumentos.validarObligatorio(null, Cliente.SE_DEBE_INGRESAR_LOS_NOMBRES);
         } catch (Exception error) {
             Assert.assertTrue(error instanceof ValorObligatorioExcepcion);
-            Assert.assertEquals(ClienteEntidad.SE_DEBE_INGRESAR_LOS_NOMBRES, error.getMessage());
+            Assert.assertEquals(Cliente.SE_DEBE_INGRESAR_LOS_NOMBRES, error.getMessage());
         }
     }
 }

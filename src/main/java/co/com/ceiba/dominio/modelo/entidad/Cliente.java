@@ -41,4 +41,9 @@ public class Cliente {
                 Objects.equals(apellidos, cliente.apellidos) &&
                 Objects.equals(detalleCitas, cliente.detalleCitas);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idCliente, nombres, apellidos, detalleCitas);
+    }
 }

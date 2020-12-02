@@ -10,6 +10,9 @@ import java.util.Date;
 
 public class FormatearFecha {
 
+    private FormatearFecha() {
+    }
+
     private static final String FORMATO = "dd/MM/yyyy";
 
     public static Date transformarStringToDate(String fecha) {

@@ -19,7 +19,7 @@ public class ActualizarClienteService {
     }
 
     public void existeCliente(Long idCliente) {
-        Boolean existeCliente = repositorioCliente.existeCliente(idCliente);
+        boolean existeCliente = repositorioCliente.existeCliente(idCliente);
         if (!existeCliente)
             throw new ExistenciaPersonaExcepcion(ERROR_NO_EXISTE_CLIENTE);
     }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface RepositorioCliente {
 
-    Boolean existeCliente(Long idCliente);
+    boolean existeCliente(Long idCliente);
     List<Cliente> consultarCliente();
     Cliente crearCliente(Cliente cliente);
     Cliente actualizarCliente(Cliente cliente);

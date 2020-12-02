@@ -34,7 +34,7 @@ public class LoginServicioImpl implements ILoginServicio<Login> {
     }
 
     public void existeUsuarioRegistrado(String usuario) {
-        Boolean existeUsuarioRegistrado = repositorioLogin.existeUsuarioRegistrado(usuario);
+        boolean existeUsuarioRegistrado = repositorioLogin.existeUsuarioRegistrado(usuario);
         if (existeUsuarioRegistrado) {
             throw new ExistenciaPersonaExcepcion(ERROR_EXISTE_USUARIO);
         }

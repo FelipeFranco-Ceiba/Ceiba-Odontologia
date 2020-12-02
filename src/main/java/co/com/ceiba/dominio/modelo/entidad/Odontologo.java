@@ -61,4 +61,9 @@ public class Odontologo {
                 Objects.equals(estado, that.estado) &&
                 Objects.equals(detalleCitas, that.detalleCitas);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idOdontologo, nombres, apellidos, fechaIngreso, estado, detalleCitas);
+    }
 }

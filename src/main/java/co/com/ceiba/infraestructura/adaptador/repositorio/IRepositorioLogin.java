@@ -14,8 +14,7 @@ public interface IRepositorioLogin extends JpaRepository<LoginEntidad, Long>, Re
 
     @Override
     default Login crearUsuario(LoginEntidad loginEntidad) {
-        Login login = TransformadorLogin.mapToLoginModelo(saveAndFlush(loginEntidad));
-        return login;
+        return TransformadorLogin.mapToLoginModelo(saveAndFlush(loginEntidad));
     }
 
     @Override
@@ -24,7 +23,7 @@ public interface IRepositorioLogin extends JpaRepository<LoginEntidad, Long>, Re
     }
 
     @Override
-    default Boolean existeUsuarioRegistrado(String usuario) {
+    default boolean existeUsuarioRegistrado(String usuario) {
         return existsByUsuario(usuario);
     }
 

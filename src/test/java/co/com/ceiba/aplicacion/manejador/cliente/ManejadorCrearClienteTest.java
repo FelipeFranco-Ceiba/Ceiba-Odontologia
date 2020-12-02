@@ -6,7 +6,6 @@ import co.com.ceiba.dominio.excepcion.ValorObligatorioExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
 import co.com.ceiba.dominio.servicio.cliente.CrearClienteServicio;
 import co.com.ceiba.infraestructura.mockfactory.ClienteFactory;
-import co.com.ceiba.infraestructura.modelo.entidad.ClienteEntidad;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -50,13 +49,13 @@ public class ManejadorCrearClienteTest {
         ComandoCliente comandoCliente = new ClienteFactory().buildComando();
         Cliente cliente = FabricaCliente.crearCliente(comandoCliente);
 
-        when(crearClienteServicio.crearCliente(cliente)).thenThrow(new ValorObligatorioExcepcion(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS));
+        when(crearClienteServicio.crearCliente(cliente)).thenThrow(new ValorObligatorioExcepcion(Cliente.SE_DEBE_INGRESAR_LOS_APELLIDOS));
 
         try {
             spyManejadorCrearCliente.ejecutar(comandoCliente);
         } catch (Exception error) {
             assertTrue(error instanceof ValorObligatorioExcepcion);
-            assertEquals(ClienteEntidad.SE_DEBE_INGRESAR_LOS_APELLIDOS, error.getMessage());
+            assertEquals(Cliente.SE_DEBE_INGRESAR_LOS_APELLIDOS, error.getMessage());
         }
 
         verify(crearClienteServicio, times(1)).crearCliente(any(Cliente.class));
