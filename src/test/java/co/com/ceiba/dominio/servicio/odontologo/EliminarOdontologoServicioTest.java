@@ -2,7 +2,7 @@ package co.com.ceiba.dominio.servicio.odontologo;
 
 
 import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo;
+import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,12 +16,12 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class EliminarOdontologoServicioTest {
 
-    private IRepositorioOdontologo repositorioOdontologo;
+    private RepositorioOdontologoMySql repositorioOdontologo;
     private EliminarOdontologoServicio spyEliminarOdontologoServicio;
 
     @Before
     public void before() {
-        repositorioOdontologo = mock(IRepositorioOdontologo.class);
+        repositorioOdontologo = mock(RepositorioOdontologoMySql.class);
         spyEliminarOdontologoServicio = spy(new EliminarOdontologoServicio(repositorioOdontologo));
         MockitoAnnotations.initMocks(this);
     }

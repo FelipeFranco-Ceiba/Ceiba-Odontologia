@@ -2,7 +2,7 @@ package co.com.ceiba.dominio.servicio.odontologo;
 
 import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
 import co.com.ceiba.dominio.modelo.entidad.Odontologo;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo;
+import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EliminarOdontologoServicio {
 
-    private final IRepositorioOdontologo repositorioOdontologo;
+    private final RepositorioOdontologoMySql repositorioOdontologo;
     public static final String ERROR_NO_EXISTE_ODONTOLOGO = "No existe el odontologo";
 
     public void eliminarOdontologo(Long idOdontologo) {

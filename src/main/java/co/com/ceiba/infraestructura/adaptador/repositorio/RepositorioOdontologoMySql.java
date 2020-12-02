@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IRepositorioOdontologo extends JpaRepository<OdontologoEntidad, Long>, RepositorioOdontologo {
+public interface RepositorioOdontologoMySql extends JpaRepository<OdontologoEntidad, Long>, RepositorioOdontologo {
 
     @Override
     default List<Odontologo> consultarOdontologo() {

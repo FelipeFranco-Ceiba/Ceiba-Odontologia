@@ -296,7 +296,7 @@
 2020-11-19 14:49:34,081 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-19 14:49:34,840 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-19 14:49:34,853 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-19 14:49:35,211 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+2020-11-19 14:49:35,211 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 2020-11-19 14:49:35,213 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-19 14:49:35,216 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-19 14:49:35,216 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -309,7 +309,7 @@
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-19 14:49:35,691 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -335,7 +335,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -427,7 +427,7 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: ODONTOLOGIA is n
 2020-11-19 14:50:19,810 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-19 14:50:20,513 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-19 14:50:20,524 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-19 14:50:20,863 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+2020-11-19 14:50:20,863 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 2020-11-19 14:50:20,864 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-19 14:50:20,867 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-19 14:50:20,868 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -440,7 +440,7 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: ODONTOLOGIA is n
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-19 14:50:21,379 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -466,7 +466,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -824,7 +824,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 2020-11-19 15:27:41,883 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-19 15:27:42,683 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-19 15:27:42,693 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-19 15:27:43,085 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+2020-11-19 15:27:43,085 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 2020-11-19 15:27:43,086 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-19 15:27:43,089 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-19 15:27:43,090 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -837,7 +837,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-19 15:27:43,608 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -863,7 +863,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -955,7 +955,7 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: ODONTOLOGO is no
 2020-11-19 15:30:18,243 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-19 15:30:19,075 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-19 15:30:19,085 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-19 15:30:19,432 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+2020-11-19 15:30:19,432 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 2020-11-19 15:30:19,433 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-19 15:30:19,436 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-19 15:30:19,437 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -968,7 +968,7 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: ODONTOLOGO is no
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-19 15:30:19,970 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -994,7 +994,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -1086,7 +1086,7 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: Odontologo is no
 2020-11-19 15:31:44,393 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-19 15:31:45,240 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-19 15:31:45,250 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-19 15:31:45,625 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+2020-11-19 15:31:45,625 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 2020-11-19 15:31:45,628 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-19 15:31:45,631 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-19 15:31:45,632 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -1099,7 +1099,7 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: Odontologo is no
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-19 15:31:46,166 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioOdontologo': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -1125,7 +1125,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.eliminarOdontologo(java.lang.Long)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.eliminarOdontologo(java.lang.Long)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -1412,7 +1412,7 @@ org.hibernate.exception.SQLGrammarException: could not extract ResultSet
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy101.save(Unknown Source)
-	at co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioOdontologo.crearOdontologo(IRepositorioOdontologo.java:23)
+	at co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioOdontologoMySql.crearOdontologo(IRepositorioOdontologo.java:23)
 	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:710)
 	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:86)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
