@@ -1,7 +1,7 @@
 package co.com.ceiba.dominio.servicio.cliente;
 
 import co.com.ceiba.dominio.modelo.entidad.Cliente;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioCliente;
+import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioClienteMySql;
 import co.com.ceiba.infraestructura.mockfactory.ClienteFactory;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,12 +18,12 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class ConsultarClienteServicioTest {
 
-    private IRepositorioCliente repositorioCliente;
+    private RepositorioClienteMySql repositorioCliente;
     private ConsultarClienteServicio spyConsultarClienteServicio;
 
     @Before
     public void before() {
-        repositorioCliente = mock(IRepositorioCliente.class);
+        repositorioCliente = mock(RepositorioClienteMySql.class);
         spyConsultarClienteServicio = spy(new ConsultarClienteServicio(repositorioCliente));
         MockitoAnnotations.initMocks(this);
     }

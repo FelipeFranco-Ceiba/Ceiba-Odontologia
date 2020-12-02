@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface IRepositorioCliente extends JpaRepository<ClienteEntidad, Long>, RepositorioCliente {
+public interface RepositorioClienteMySql extends JpaRepository<ClienteEntidad, Long>, RepositorioCliente {
 
     @Override
     default Boolean existeCliente(Long idCliente) {

@@ -2,7 +2,7 @@ package co.com.ceiba.dominio.servicio.cliente;
 
 
 import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioCliente;
+import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioClienteMySql;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
@@ -17,12 +17,12 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class EliminarClienteServicioTest {
 
-    private IRepositorioCliente repositorioCliente;
+    private RepositorioClienteMySql repositorioCliente;
     private EliminarClienteServicio spyEliminarClienteServicio;
 
     @Before
     public void before() {
-        repositorioCliente = mock(IRepositorioCliente.class);
+        repositorioCliente = mock(RepositorioClienteMySql.class);
         spyEliminarClienteServicio = spy(new EliminarClienteServicio(repositorioCliente));
         MockitoAnnotations.initMocks(this);
     }

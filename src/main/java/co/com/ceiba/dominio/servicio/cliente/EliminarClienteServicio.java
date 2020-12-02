@@ -1,16 +1,15 @@
 package co.com.ceiba.dominio.servicio.cliente;
 
 import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioCliente;
+import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioClienteMySql;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @AllArgsConstructor
 public class EliminarClienteServicio {
 
-    private final IRepositorioCliente repositorioCliente;
+    private final RepositorioClienteMySql repositorioCliente;
     public static final String ERROR_NO_EXISTE_CLIENTE = "No existe el cliente";
 
     public void eliminarCliente(Long idCliente) {
