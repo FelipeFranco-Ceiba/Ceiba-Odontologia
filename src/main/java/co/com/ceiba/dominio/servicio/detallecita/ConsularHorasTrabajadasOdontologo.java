@@ -1,4 +1,4 @@
-package co.com.ceiba.dominio.servicio.detalleCita;
+package co.com.ceiba.dominio.servicio.detallecita;
 
 import co.com.ceiba.dominio.excepcion.CitaExcepcion;
 import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql;

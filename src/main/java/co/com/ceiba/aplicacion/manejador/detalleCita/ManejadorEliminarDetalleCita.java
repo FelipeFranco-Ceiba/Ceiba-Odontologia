@@ -1,7 +1,7 @@
 package co.com.ceiba.aplicacion.manejador.detalleCita;
 
 import co.com.ceiba.aplicacion.manejador.ManejadorComando;
-import co.com.ceiba.dominio.servicio.detalleCita.EliminarDetalleCitaService;
+import co.com.ceiba.dominio.servicio.detallecita.EliminarDetalleCitaService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

@@ -4,7 +4,7 @@ import co.com.ceiba.aplicacion.comando.ComandoDetalleCita;
 import co.com.ceiba.aplicacion.fabrica.FabricaDetalleCita;
 import co.com.ceiba.aplicacion.manejador.ManejadorComandoRespuesta;
 import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
-import co.com.ceiba.dominio.servicio.detalleCita.ActualizarDetalleCitaServicio;
+import co.com.ceiba.dominio.servicio.detallecita.ActualizarDetalleCitaServicio;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

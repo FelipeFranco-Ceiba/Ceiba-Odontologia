@@ -1,8 +1,6 @@
-package co.com.ceiba.dominio.servicio.detalleCita;
+package co.com.ceiba.dominio.servicio.detallecita;
 
 import co.com.ceiba.dominio.excepcion.CitaExcepcion;
-import co.com.ceiba.dominio.excepcion.ExistenciaPersonaExcepcion;
-import co.com.ceiba.dominio.servicio.odontologo.EliminarOdontologoServicio;
 import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql;
 import org.junit.Before;
 import org.junit.Test;
