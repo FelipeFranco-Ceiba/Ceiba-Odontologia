@@ -307,7 +307,7 @@
 2020-11-22 22:58:07,614 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-22 22:58:08,569 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-22 22:58:08,581 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-22 22:58:09,086 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+2020-11-22 22:58:09,086 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 2020-11-22 22:58:09,088 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-22 22:58:09,094 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-22 22:58:09,095 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -320,7 +320,7 @@
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-22 22:58:09,592 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -346,7 +346,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -447,7 +447,7 @@ Caused by: org.hibernate.QueryException: could not resolve property: idOdontolog
 2020-11-22 22:58:55,878 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-22 22:58:56,758 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-22 22:58:56,769 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-22 22:58:57,172 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+2020-11-22 22:58:57,172 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 2020-11-22 22:58:57,173 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-22 22:58:57,176 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-22 22:58:57,177 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -460,7 +460,7 @@ Caused by: org.hibernate.QueryException: could not resolve property: idOdontolog
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-22 22:58:57,701 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -486,7 +486,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -615,7 +615,7 @@ Caused by: org.hibernate.QueryException: could not resolve property: idOdontolog
 2020-11-22 23:04:49,206 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-22 23:04:50,110 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-22 23:04:50,125 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-22 23:04:50,623 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+2020-11-22 23:04:50,623 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 2020-11-22 23:04:50,625 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-22 23:04:50,628 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-22 23:04:50,629 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -628,7 +628,7 @@ Caused by: org.hibernate.QueryException: could not resolve property: idOdontolog
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-22 23:04:51,196 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -654,7 +654,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
@@ -770,7 +770,7 @@ Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hq
 2020-11-22 23:06:17,303 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [main] Triggering deferred initialization of Spring Data repositories�
 2020-11-22 23:06:18,204 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-11-22 23:06:18,216 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-11-22 23:06:18,770 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+2020-11-22 23:06:18,770 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 2020-11-22 23:06:18,773 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-11-22 23:06:18,776 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-22 23:06:18,777 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
@@ -783,7 +783,7 @@ Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hq
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-11-22 23:06:19,313 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'IRepositorioDetalleCita': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:176)
 	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
@@ -809,7 +809,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at co.com.ceiba.CeibaOdontologiaApplication.main(CeibaOdontologiaApplication.java:10)
-Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita.sumarHoras(java.lang.Long,java.util.Date)!
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract int co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql.sumarHoras(java.lang.Long,java.util.Date)!
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
 	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
 	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)

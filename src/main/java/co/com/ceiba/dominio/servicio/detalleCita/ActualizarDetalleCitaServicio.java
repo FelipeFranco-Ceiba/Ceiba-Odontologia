@@ -1,7 +1,7 @@
 package co.com.ceiba.dominio.servicio.detalleCita;
 
 import co.com.ceiba.dominio.modelo.entidad.DetalleCita;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita;
+import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ActualizarDetalleCitaServicio {
 
-    private final IRepositorioDetalleCita repositorioDetalleCita;
+    private final RepositorioDetalleCitaMySql repositorioDetalleCita;
     private final ConsularHorasTrabajadasOdontologo consularHorasTrabajadasOdontologo;
     private final ValidarDetalleCita validarDetalleCita;
 

@@ -1,7 +1,7 @@
 package co.com.ceiba.dominio.servicio.detalleCita;
 
 import co.com.ceiba.dominio.excepcion.CitaExcepcion;
-import co.com.ceiba.infraestructura.adaptador.repositorio.IRepositorioDetalleCita;
+import co.com.ceiba.infraestructura.adaptador.repositorio.RepositorioDetalleCitaMySql;
 import co.com.ceiba.infraestructura.utilidades.FormatearFecha;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class ConsularHorasTrabajadasOdontologo {
 
-    private final IRepositorioDetalleCita repositorioDetalleCita;
+    private final RepositorioDetalleCitaMySql repositorioDetalleCita;
     private static final Long VALOR_HORA = 35000L;
 
     public Long consultarHorasTrabajadas(Long idOdontologo, Date fechaCita, Long horaCita) {

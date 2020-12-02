@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface IRepositorioDetalleCita extends JpaRepository<DetalleCitaEntidad, Long>, RepositorioDetalleCita {
+public interface RepositorioDetalleCitaMySql extends JpaRepository<DetalleCitaEntidad, Long>, RepositorioDetalleCita {
 
     @Override
     default List<DetalleCita> consultarDetalleCita() {
