@@ -38,5 +38,7 @@ public class EliminarOdontologoServicioTest {
             assertTrue(error instanceof ExistenciaPersonaExcepcion);
             assertEquals(EliminarOdontologoServicio.ERROR_NO_EXISTE_ODONTOLOGO, error.getMessage());
         }
+
+        verify(repositorioOdontologo, times(1)).consultarOdontologoPorId(anyLong());
     }
 }

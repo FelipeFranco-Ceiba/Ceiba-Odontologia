@@ -11,7 +11,6 @@ public class CrearDetalleCitaService {
 
     private final RepositorioDetalleCitaMySql repositorioDetalleCita;
     private final ConsularHorasTrabajadasOdontologo consularHorasTrabajadasOdontologo;
-    private final ValidarDetalleCita validarDetalleCita;
 
     public DetalleCita crearDetalleCita(DetalleCita detalleCita) {
         Long valorCita = consularHorasTrabajadasOdontologo.consultarHorasTrabajadas(detalleCita.getOdontologo().getIdOdontologo(), detalleCita.getFechaCita(), detalleCita.getHoraCita());

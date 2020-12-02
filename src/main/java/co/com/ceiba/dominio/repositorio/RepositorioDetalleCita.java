@@ -11,7 +11,7 @@ public interface RepositorioDetalleCita {
 
     DetalleCita crearDetalleCita(DetalleCita detalleCita);
 
-    Boolean existeDetalleCita(Long idDetalleCita);
+    boolean existeDetalleCita(Long idDetalleCita);
 
     void eliminarDetalleCita(Long idDetalleCita);
 

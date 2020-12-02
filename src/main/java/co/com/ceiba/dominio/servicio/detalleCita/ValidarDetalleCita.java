@@ -10,10 +10,11 @@ import org.springframework.stereotype.Service;
 public class ValidarDetalleCita {
 
     private final RepositorioDetalleCitaMySql repositorioDetalleCita;
+    public static final String ERROR_NO_EXISTE_INFORMACION_DE_LA_CITA = "No existe informacion del detalle de la cita";
 
     public void existeDetalleCita(Long idDetalleCita) {
-        Boolean existeDetalleCita = repositorioDetalleCita.existeDetalleCita(idDetalleCita);
+        boolean existeDetalleCita = repositorioDetalleCita.existeDetalleCita(idDetalleCita);
         if (!existeDetalleCita)
-            throw new CitaExcepcion("No existe informacion del detalle de la cita");
+            throw new CitaExcepcion(ERROR_NO_EXISTE_INFORMACION_DE_LA_CITA);
     }
 }

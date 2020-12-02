@@ -26,7 +26,7 @@ public interface RepositorioDetalleCitaMySql extends JpaRepository<DetalleCitaEn
     }
 
     @Override
-    default Boolean existeDetalleCita(Long idDetalleCita) {
+    default boolean existeDetalleCita(Long idDetalleCita) {
         return existsById(idDetalleCita);
     }
 

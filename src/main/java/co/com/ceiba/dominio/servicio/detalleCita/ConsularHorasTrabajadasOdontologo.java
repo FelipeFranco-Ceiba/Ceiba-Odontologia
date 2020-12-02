@@ -16,6 +16,7 @@ public class ConsularHorasTrabajadasOdontologo {
 
     private final RepositorioDetalleCitaMySql repositorioDetalleCita;
     private static final Long VALOR_HORA = 35000L;
+    public static final String ERROR_CANTIDAD_HORA_CITA = "La cita sobrepasa la cantidad de horas maximas de trabajo del odontologo";
 
     public Long consultarHorasTrabajadas(Long idOdontologo, Date fechaCita, Long horaCita) {
         int horasTrabajadas = repositorioDetalleCita.horasTrabajasOdontologo(idOdontologo, fechaCita);
@@ -31,7 +32,7 @@ public class ConsularHorasTrabajadasOdontologo {
     private Long validYCalcularValorHorasFinDeSemana(int horasTrabajadas, Long horaCita) {
         long totalHoras = horasTrabajadas + horaCita;
         if (totalHoras > 5) {
-            throw new CitaExcepcion("La cita sobrepasa la cantidad de horas maximas de trabajo del odontologo");
+            throw new CitaExcepcion(ERROR_CANTIDAD_HORA_CITA);
         }
         return ((horaCita * VALOR_HORA) * 2);
     }
@@ -39,7 +40,7 @@ public class ConsularHorasTrabajadasOdontologo {
     private Long validYCalcularValorHorasEnSemana(int horasTrabajadas, Long horaCita) {
         long totalHoras = horasTrabajadas + horaCita;
         if (totalHoras > 8) {
-            throw new CitaExcepcion("La cita sobrepasa la cantidad de horas maximas de trabajo del odontologo");
+            throw new CitaExcepcion(ERROR_CANTIDAD_HORA_CITA);
         }
         return (horaCita * VALOR_HORA);
     }
